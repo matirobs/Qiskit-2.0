@@ -16,15 +16,54 @@ Quantum Algorithm #1: QAOA Penalization Algorithm
 
 
 
-1. Data Setup & Cost Calculation (mismatch)The Goal: Choose the best 4 cells out of 8 to build a battery pack that stays balanced and healthy over time.Capacity Analysis: Compares current capacities (capacity_now) and future projections (capacity_future after 200 cycles).The Penalty Formula: Computes an $8 \times 8$ mismatch table combining present differences (40% weight) and future degradation differences (60% weight) so that cells staying matched in the future are heavily favored.2. Quantum Initialization (StatePreparation)Smart Superposition: Instead of guessing randomly, you use StatePreparation to create a starting quantum state containing only the valid combinations (all 8-bit patterns where exactly four bits are 1).Constraint Enforcement: This ensures the quantum computer never wastes time evaluating invalid pack sizes (like picking 3 or 5 cells).3. The QAOA Layers (Cost & Mixers)Cost Layer (cost_layer): Uses controlled phase gates (cp) to penalize mismatched cell pairs. If two paired cells have a high degradation gap, they receive a heavier phase penalty.Swap Mixer (swap_mixer): Uses specialized XXPlusYYGate swap gates across all qubit pairs. This lets the quantum state explore different combinations while strictly keeping the rule that exactly 4 cells remain selected.4. Classical Optimization (COBYLA)Parameter Tuning: The quantum circuit relies on variational angles called gammas and betas.Finding the Sweet Spot: You first do a rough grid search, then hand the starting point over to SciPy's COBYLA optimizer to iteratively fine-tune the angles until the circuit yields the lowest possible average pack score.5. Measurement and Final ResultsSampling the Results: The optimized circuit is run for 1,024 shots using StatevectorSampler.Decoding: The script reverses the measurement bitstrings (reversed(key)) to map qubit positions back to cell names (e.g., C0, C1, C2, C3).The Winner: It filters out the top-measured packs, confirms the quantum computer matched the classical brute-force best answer, and prints out the final usable capacity and future spread of your winning battery pack!
-
 SWAP algo: 
 2. Compare capacities with future projections --> makes a mismatching table that'll compare the present differences of 40% weight with the future degradation diff 
 3. Cells that stay matched in the future will be favored
 4. Quantum Part: Instead of starting with all of the cells, we narrow them down finding ones where 4 bits are 1 
 5. Quantum algorithm: using CNOT to find mismatched cells to penalize them 
+6. Use a XXPlusYY Gate to swap gates across qubit pairs --> gates let us keep the 4 cells 
+7. Uses a hamiltonian angle shift like the previous algorithm until we find the combination with the lowest possible energy state through 1,024 shots 
+8. Filters out the most common and top measured packs, while also sending out the predicted capacity. 
 
 
+Neural Network: 
+- We adapted a neural network that our teammate had priorly made in java (used for the sake of speed) and altered it to be used in python for the sake of expanding our SWAP and Quantum algorithms to be used for any combination of cells out of a sample of any size
+
+
+
+CLASSICAL #1 
+Setup & Cooling Schedule:initializes a random seed, sets up temperatures, and picks random starting cell packs across multiple restarts.
+
+The Neighborhood Swap: swaps one cell currently in the pack with one outside it, keeping the group size (like the SWAP algo)
+
+The Acceptance Rule (Metropolis): Always accepts better energy scores, but conditionally accepts worse scores based on a declining temperature probability to escape  traps.
+
+Tracking & Output: Continuously updates and saves the global best pack found during the search, retrning full performance statistics at end
+
+
+Classical #2
+Multi-Start: Loops through each cell in the dataset as starting pt to for search multiple independent attempts.
+
+Incremental Greedy Addition: it evaluates all remaining unchosen cells and appends the one with the lowest incremental cost relative to the current group.
+
+Group Completion: Continues adding cells until each group reaches the target pack size (pack_size).
+
+Best Group Selection: Ranks all generated groups, picks the one with the lowest global score, and returns performance stats.
+
+
+Classical #3
+Baseline Metrics Calculation: Computes core performance indicators like usable pack capacity, internal resistance spread, and statistical divergence (coefficient of variation).
+
+Future Truth Integration: Optionally incorporates real-world observed outcomes so evaluates how accurately the pack performed after actual cycling.
+
+Optimality & Regret Analysis: Compares the selection's score against a known optimum to calculate absolute performance gaps, percentage error, and normalized regret.
+
+
+Classical 4: 
+
+Result Builder (result): Validates the chosen indices, calculates the final objective energy score from the basic parameters found, measures the exact execution time in milliseconds, and bundles it with any extra solver metadata.
+
+Deterministic Ranking (ranking): Evaluates the primary objective energy score first, then falls back on sorted cell identifiers to ensure reliable, reproducible tie-breaking across different runs.
 
 
 
