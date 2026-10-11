@@ -18,7 +18,6 @@ n = len(names)   # 8 cells to choose from
 K = 4            # cells in one pack
 
 
-# ---------- Part 4: mismatch between every pair of cells ----------
 
 # difference between every pair of cells (makes an 8 x 8 table)
 diff_now = capacity_now[:, None] - capacity_now[None, :]
