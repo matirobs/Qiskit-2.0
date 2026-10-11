@@ -1,18 +1,26 @@
-"""Convert a capacity forecast into the fields needed for group selection."""
+"""Minimal callable project API used by the environment-check page."""
+
 from __future__ import annotations
 
-from .prediction.model import CapacityModel
+import json
+from typing import Any
+
+from repackq.quantum.qiskit_compat import get_capabilities as _get_capabilities
+from repackq.quantum.qiskit_compat import run_smoke_test as _run_smoke_test
 
 
-def predict_snapshot(model: CapacityModel, *, cell_id: str, primary_history: list[dict],
-                     observed_second_life: list[dict], cutoff: int = 0, horizon: int = 200,
-                     primary_protocol_ids=None) -> dict:
-    """Build a selection snapshot from observed history. Capacity is in amp-hours
-    and resistance is in ohms; nominal cell capacity is 2.4 amp-hours."""
-    forecast = model.predict(primary_history, observed_second_life, cutoff=cutoff, horizon=horizon,
-                             primary_protocol_ids=primary_protocol_ids)
-    latest = max(observed_second_life or primary_history, key=lambda point: point["cycle"])
-    return {"cell_id": str(cell_id), "capacity_ah": forecast["current_capacity_ah"],
-            "nominal_capacity_ah": 2.4, "soh": forecast["current_capacity_ah"] / 2.4,
-            "internal_resistance_ohm": latest.get("resistance_ohm"),
-            "temperature_c": latest.get("temperature_c"), **forecast}
+def get_capabilities() -> dict[str, Any]:
+    return _get_capabilities()
+
+
+def run_smoke_test() -> dict[str, Any]:
+    return _run_smoke_test()
+
+
+def main() -> None:
+    report = {"capabilities": get_capabilities(), "smoke_test": run_smoke_test()}
+    print(json.dumps(report, indent=2, sort_keys=True))
+
+
+if __name__ == "__main__":
+    main()

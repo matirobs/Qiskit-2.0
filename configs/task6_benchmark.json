@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "seeds": [11, 23, 37, 41, 59, 71, 83, 97, 101, 127, 149, 163, 181, 197, 211, 227, 241, 263, 281, 307],
+  "candidate_sizes": [8],
+  "pack_size_k": 4,
+  "horizon_cycles": 200,
+  "decision_cycle": 16,
+  "minimum_soh_range": 0.02,
+  "stratify_protocol": false,
+  "annealing_steps": 3000,
+  "qaoa": {
+    "shots": 1024,
+    "reps": 1,
+    "optimizer": "auto",
+    "max_evaluations": 160,
+    "simulator_seed_base": 20261010
+  }
+}

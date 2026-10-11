@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#f4f4ec">
+    <meta name="description" content="A mission-aware quantum recommissioning experiment for second-life EV batteries.">
+    <title>RePack-Q · Battery recommissioning studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to workspace</a>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="RePack-Q home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>RePack<span class="brand-q">-Q</span></span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#workspace">Workbench</a>
+        <a class="nav-link" href="#benchmark">Benchmark</a>
+      </nav>
+      <div class="top-meta">
+        <span class="runtime-dot" id="runtime-dot" aria-hidden="true"></span>
+        <span id="runtime-label">Local demo</span>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-shell">
+      <section class="hero" id="top" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Mission-aware recommissioning</p>
+          <h1 id="page-title">Build a pack for<br><em>the next life.</em></h1>
+          <p class="hero-lede">Cells that look alike today can drift apart tomorrow. RePack-Q groups retired cells using the aging trajectory ahead, then checks the choice against held-out future data.</p>
+          <div class="hero-foot">
+            <span class="dataset-pill"><span class="pill-dot"></span><span id="data-classification">Synthetic interaction fixture</span></span>
+            <span class="hero-meta">NMC · single series string · QAOA p=1</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb orb-one"></div><div class="orb orb-two"></div>
+          <div class="hero-art-caption"><span>01 / 08</span><span>cell inventory</span></div>
+          <svg class="hero-orbit" viewBox="0 0 420 360" fill="none">
+            <ellipse cx="210" cy="181" rx="173" ry="81" transform="rotate(-28 210 181)" stroke="currentColor" stroke-opacity=".18" />
+            <ellipse cx="210" cy="181" rx="127" ry="161" transform="rotate(35 210 181)" stroke="currentColor" stroke-opacity=".12" />
+            <circle cx="331" cy="100" r="5" fill="#dcf163"/><circle cx="75" cy="204" r="4" fill="#8dbe9f"/>
+            <path d="M152 105h94a15 15 0 0 1 15 15v120a15 15 0 0 1-15 15h-94a15 15 0 0 1-15-15V120a15 15 0 0 1 15-15Z" stroke="#d7e9c9" stroke-opacity=".8" stroke-width="1.4" />
+            <path d="M178 93h42v12h-42z" fill="#d7e9c9"/><path d="M153 154h93M153 183h93M153 212h93" stroke="#d7e9c9" stroke-opacity=".5"/>
+            <path d="M163 169h48M163 198h64M163 227h35" stroke="#dcf163" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="210" cy="181" r="5" fill="#dcf163"/>
+          </svg>
+          <div class="hero-art-note"><span class="note-mark">↗</span><span>Predicted balance<br>over the next 200 cycles</span></div>
+        </div>
+      </section>
+
+      <div class="workspace-heading" id="workspace">
+        <div>
+          <p class="eyebrow">Workbench <span class="eyebrow-index">/ 01</span></p>
+          <h2>Shape your series string</h2>
+        </div>
+        <div class="workspace-status" id="workspace-status" role="status" aria-live="polite">Loading decision-time inventory…</div>
+      </div>
+
+      <div class="workspace-grid">
+        <section class="panel mission-panel" aria-labelledby="mission-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">01 · Mission</p><h3 id="mission-title">Choose the duty</h3></div>
+            <span class="step-number">01</span>
+          </div>
+          <label class="field-label" for="mission-select">Storage profile</label>
+          <select id="mission-select" class="select-control">
+            <option value="pv_tou">Residential PV + time-of-use</option>
+            <option value="frequency_response">Frequency response · experimental</option>
+          </select>
+          <p class="field-help" id="mission-description">Daily solar shifting with evening peak support. The mission sets the future horizon and compatibility weights.</p>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label class="field-label" for="horizon-select">Forecast horizon</label>
+              <div class="select-suffix"><select id="horizon-select" class="select-control" aria-describedby="horizon-help"><option value="100">100 cycles</option><option value="150">150 cycles</option><option value="200" selected>200 cycles</option></select><span>H</span></div>
+              <span class="field-help compact" id="horizon-help">Fixture-supported horizons</span>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="pack-size-select">Series pack size</label>
+              <div class="select-suffix"><select id="pack-size-select" class="select-control" aria-describedby="pack-size-help"><option value="3">3 cells</option><option value="4" selected>4 cells</option><option value="5">5 cells</option></select><span>K</span></div>
+              <span class="field-help compact" id="pack-size-help">Select 3–5 from 8 candidates</span>
+            </div>
+          </div>
+
+          <div class="objective-block">
+            <div class="subheading-row"><span class="field-label">Compatibility objective</span><button class="text-button" type="button" data-action="open-assumptions">Assumptions ↗</button></div>
+            <div class="segmented" role="group" aria-label="Compatibility objective">
+              <button class="segment active" type="button" data-objective="trajectory_aware" aria-pressed="true"><span class="segment-icon">↗</span><span>Trajectory-aware</span></button>
+              <button class="segment" type="button" data-objective="current_only" aria-pressed="false"><span class="segment-icon">≈</span><span>Current state</span></button>
+            </div>
+            <p class="field-help objective-help" id="objective-copy">Balances present capacity and estimated capacity at the selected horizon.</p>
+          </div>
+
+          <details class="assumptions" id="assumptions">
+            <summary><span>Model assumptions</span><span class="summary-chevron" aria-hidden="true">⌄</span></summary>
+            <div class="assumptions-body">
+              <p>PV + TOU is the default mission. The 200-cycle horizon and objective weights are explicit modeling assumptions, not universal battery constants.</p>
+              <dl><div><dt>Current capacity match</dt><dd>0.30</dd></div><div><dt>Resistance match</dt><dd>0.20</dd></div><div><dt>Future capacity match</dt><dd>0.35</dd></div><div><dt>Health reward</dt><dd>0.10</dd></div><div><dt>Forecast uncertainty</dt><dd>0.05</dd></div><div><dt>Temperature match</dt><dd>0.00</dd></div></dl>
+              <p class="assumption-foot">Weights are normalized per candidate pool. The demo does not simulate a household load trace or certify battery safety.</p>
+            </div>
+          </details>
+        </section>
+
+        <section class="panel inventory-panel" aria-labelledby="inventory-title">
+          <div class="section-heading inventory-heading">
+            <div><p class="eyebrow">02 · Candidate inventory</p><h3 id="inventory-title">Eight cells, one string</h3></div>
+            <span class="inventory-count"><strong id="inventory-count">08</strong><span>available</span></span>
+          </div>
+          <div class="inventory-key"><span><i class="key-dot current-dot"></i>Available at recommissioning</span><span><i class="key-dot forecast-dot"></i>Forecast · held out</span></div>
+          <div class="candidate-grid" id="candidate-grid" aria-label="Candidate cells"></div>
+          <p class="inventory-note"><span class="lock-icon" aria-hidden="true">⌑</span> Future measurements stay hidden until you reveal them.</p>
+        </section>
+
+        <section class="panel pack-panel" aria-labelledby="pack-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">03 · Manual pack</p><h3 id="pack-title">Series string <span class="title-count" id="pack-title-count">0 / 4</span></h3></div>
+            <button class="icon-button" type="button" data-action="clear-pack" aria-label="Clear manual pack" title="Clear pack">↺</button>
+          </div>
+          <p class="panel-intro">Add cells in any order. The weakest cell sets usable pack capacity.</p>
+          <div class="pack-tray" id="pack-tray" aria-label="Manual series pack slots"></div>
+          <div class="pack-metrics" id="manual-metrics" aria-live="polite"></div>
+          <div class="pack-actions">
+            <button class="button button-quiet" type="button" data-action="use-exact" disabled id="use-exact-button">Load exact pack</button>
+            <button class="button button-primary" type="button" data-action="reveal" disabled id="reveal-button"><span>Reveal future</span><span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="button-note" id="reveal-note">Build a complete pack to unlock the held-out reveal.</p>
+        </section>
+
+        <section class="panel compare-panel" aria-labelledby="compare-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">04 · Classical comparison</p><h3 id="compare-title">Find the best match</h3></div>
+            <span class="exact-tag">Exact oracle</span>
+          </div>
+          <p class="panel-intro">Strong classical baselines frame what QAOA needs to approximate.</p>
+          <div class="algorithm-list" id="algorithm-list">
+            <div class="empty-result"><span class="empty-mark">◎</span><p>Run the comparison to score the candidate pool.</p></div>
+          </div>
+          <div class="comparison-footer">
+            <button class="button button-dark" type="button" data-action="run-classical" id="run-classical-button"><span>Run classical solvers</span><span aria-hidden="true">→</span></button>
+            <span id="comparison-label" class="result-source">Fixture preview · synthetic</span>
+          </div>
+        </section>
+
+        <section class="panel quantum-panel" aria-labelledby="quantum-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">05 · Quantum subroutine</p><h3 id="quantum-title">QAOA inspector</h3></div>
+            <span class="quantum-chip"><span class="quantum-chip-dot"></span> Qiskit</span>
+          </div>
+          <p class="panel-intro">One binary variable per candidate. p=1 QAOA samples fixed-size groups from the mission-weighted QUBO.</p>
+          <div class="quantum-state" id="quantum-state" role="status" aria-live="polite"><span class="state-pulse"></span><span>Waiting for a run</span></div>
+          <div class="qaoa-stages" aria-label="QAOA run stages">
+            <div class="stage" data-stage="preparing"><span>1</span><span>Prepare</span></div>
+            <div class="stage" data-stage="parameter_optimization"><span>2</span><span>Optimize</span></div>
+            <div class="stage" data-stage="sampling"><span>3</span><span>Sample</span></div>
+            <div class="stage" data-stage="complete"><span>4</span><span>Inspect</span></div>
+          </div>
+          <div class="inspector-grid" id="inspector-grid">
+            <div><span>Qubits</span><strong id="inspector-qubits">8</strong></div><div><span>Depth p</span><strong id="inspector-depth">1</strong></div><div><span>Backend</span><strong id="inspector-backend">—</strong></div><div><span>Shots</span><strong id="inspector-shots">—</strong></div>
+          </div>
+          <div class="probability-heading"><span>Measured states</span><span id="feasible-mass">Feasible mass —</span></div>
+          <div class="probability-chart" id="probability-chart" role="group" aria-label="QAOA measured bitstrings and their probabilities"><div class="chart-empty">Run QAOA to inspect measured bitstrings.</div></div>
+          <div class="qaoa-details" id="qaoa-details"></div>
+          <button class="button button-quantum" type="button" data-action="run-qaoa" id="run-qaoa-button"><span>Run QAOA</span><span aria-hidden="true">⌁</span></button>
+          <p class="button-note" id="qaoa-note">Local fixture mode shows a precomputed QAOA replay. Live runs require the registered Python bridge.</p>
+        </section>
+
+        <section class="panel reveal-panel" aria-labelledby="reveal-title">
+          <div class="reveal-header">
+            <div><p class="eyebrow">06 · Held-out evaluation</p><h3 id="reveal-title">The future, when you’re ready</h3></div>
+            <span class="heldout-badge"><span>⌑</span> Hidden before reveal</span>
+          </div>
+          <div class="reveal-body" id="reveal-body">
+            <div class="reveal-illustration" aria-hidden="true"><span class="reveal-ring ring-a"></span><span class="reveal-ring ring-b"></span><span class="reveal-core">H</span><span class="reveal-star star-a">✳</span><span class="reveal-star star-b">·</span></div>
+            <div class="reveal-copy"><p>After recommissioning, the dataset recorded how each cell actually changed. Reveal it only after building your pack to compare the forecast with the held-out outcome.</p><div class="reveal-placeholder" id="reveal-placeholder"><span class="placeholder-line"></span><span class="placeholder-line short"></span><span class="placeholder-label">No post-cutoff measurements shown</span></div></div>
+          </div>
+          <div class="revealed-results" id="revealed-results" hidden></div>
+        </section>
+
+        <section class="panel benchmark-panel" id="benchmark" aria-labelledby="benchmark-title">
+          <div class="section-heading benchmark-heading">
+            <div><p class="eyebrow">07 · Reproducible experiment</p><h3 id="benchmark-title">Twenty retrospective trials</h3></div>
+            <span class="replay-badge">Aggregate replay</span>
+          </div>
+          <div class="benchmark-intro"><p>Precomputed results from the primary 86-cell Deep Sorting dataset. Three aggregate trial rows are included for replay; no cell identifiers or pack membership are shipped.</p><span class="benchmark-stat"><strong id="trial-count">20</strong><small>trials</small></span></div>
+          <div class="benchmark-chart" id="benchmark-chart" role="list" aria-label="Mean observed pack divergence by algorithm"></div>
+          <div class="benchmark-foot" id="benchmark-foot"></div>
+        </section>
+      </div>
+
+      <footer class="page-footer">
+        <div><strong>RePack-Q</strong><span>Match batteries by how they will age, not just how they look today.</span></div>
+        <p>This effort is supported by Qollab &amp; IonQ</p>
+        <span class="footer-limit">Research experiment · no quantum speedup or deployment-safety claim</span>
+      </footer>
+    </main>
+
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>

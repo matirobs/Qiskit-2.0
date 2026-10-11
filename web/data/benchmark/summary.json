@@ -1,0 +1,164 @@
+{
+  "algorithms": {
+    "compatibility_greedy": {
+      "current_capacity_spread_ah_mean": 0.029515299999999967,
+      "current_capacity_spread_ah_median": 0.02638699999999994,
+      "feasible_trials": 20,
+      "objective_gap_mean": 0.0,
+      "objective_gap_median": 0.0,
+      "observed_opd_mean": 0.07321093474433002,
+      "observed_opd_median": 0.07016645594723747,
+      "observed_usable_capacity_ah_mean": 1.4351787,
+      "observed_usable_capacity_ah_median": 1.372339,
+      "runtime_ms_mean": 2.3090842500096187,
+      "runtime_ms_median": 2.136560000508325,
+      "success_rate": 1.0,
+      "valid_trials": 20
+    },
+    "exact_enumeration": {
+      "current_capacity_spread_ah_mean": 0.029515299999999967,
+      "current_capacity_spread_ah_median": 0.02638699999999994,
+      "feasible_trials": 20,
+      "objective_gap_mean": 0.0,
+      "objective_gap_median": 0.0,
+      "observed_opd_mean": 0.07321093474433002,
+      "observed_opd_median": 0.07016645594723747,
+      "observed_usable_capacity_ah_mean": 1.4351787,
+      "observed_usable_capacity_ah_median": 1.372339,
+      "runtime_ms_mean": 4.3383623498812085,
+      "runtime_ms_median": 3.964243498558062,
+      "success_rate": 1.0,
+      "valid_trials": 20
+    },
+    "qaoa": {
+      "current_capacity_spread_ah_mean": 0.030263899999999976,
+      "current_capacity_spread_ah_median": 0.028699499999999878,
+      "feasible_trials": 20,
+      "objective_gap_mean": 0.08947769962579022,
+      "objective_gap_median": 0.0,
+      "observed_opd_mean": 0.07619973338958644,
+      "observed_opd_median": 0.07287670878431388,
+      "observed_usable_capacity_ah_mean": 1.4290591,
+      "observed_usable_capacity_ah_median": 1.372339,
+      "runtime_ms_mean": 1509.0103417993305,
+      "runtime_ms_median": 1851.8534924987762,
+      "success_rate": 1.0,
+      "valid_trials": 20
+    },
+    "simulated_annealing": {
+      "current_capacity_spread_ah_mean": 0.029515299999999967,
+      "current_capacity_spread_ah_median": 0.02638699999999994,
+      "feasible_trials": 20,
+      "objective_gap_mean": 0.0,
+      "objective_gap_median": 0.0,
+      "observed_opd_mean": 0.07321093474433002,
+      "observed_opd_median": 0.07016645594723747,
+      "observed_usable_capacity_ah_mean": 1.4351787,
+      "observed_usable_capacity_ah_median": 1.372339,
+      "runtime_ms_mean": 69.27852679964417,
+      "runtime_ms_median": 68.90087549982127,
+      "success_rate": 1.0,
+      "valid_trials": 20
+    },
+    "soh_sort": {
+      "current_capacity_spread_ah_mean": 0.027556349999999997,
+      "current_capacity_spread_ah_median": 0.027125999999999872,
+      "feasible_trials": 20,
+      "objective_gap_mean": 1.792503577675576,
+      "objective_gap_median": 1.1477097978477842,
+      "observed_opd_mean": 0.07672217042863383,
+      "observed_opd_median": 0.08255544188832976,
+      "observed_usable_capacity_ah_mean": 1.4603749499999998,
+      "observed_usable_capacity_ah_median": 1.431105,
+      "runtime_ms_mean": 0.021889250092499424,
+      "runtime_ms_median": 0.012778999007423408,
+      "success_rate": 1.0,
+      "valid_trials": 20
+    }
+  },
+  "candidate_sizes": [
+    8
+  ],
+  "contains_cell_level_records": false,
+  "data_classification": "derived-real",
+  "decision_cycles": [
+    16
+  ],
+  "horizon_cycles": 200,
+  "objective_ablation": {
+    "exact_current_only_bottleneck_ah_mean": 1.43987235,
+    "exact_current_only_opd_mean": 0.07187641722401554,
+    "exact_trajectory_aware_bottleneck_ah_mean": 1.4351787,
+    "exact_trajectory_aware_opd_mean": 0.07321093474433002,
+    "fraction_trajectory_aware_lower_opd": 0.35,
+    "mean_opd_improvement": -0.001334517520314478,
+    "median_opd_improvement": 0.0,
+    "trajectory_aware_equal_or_higher_opd_trials": 13,
+    "trajectory_aware_lower_opd_trials": 7,
+    "valid_paired_trials": 20
+  },
+  "pack_size_k": 4,
+  "prediction_evaluation": {
+    "limitations": [
+      "Forecasts are evaluated at cell-by-decision-cycle cutoffs; cutoffs within a cell overlap.",
+      "The horizon is measured in dataset cycle indices, not calendar time or a household duty trace.",
+      "This metric evaluates the predictor only; it does not establish pack or solver performance."
+    ],
+    "metrics": {
+      "evaluation_unit": "cell-by-decision-cycle forecasts; cutoffs within each cell overlap",
+      "future_truth_coverage": 0.5868520859671302,
+      "horizon_cycles": 200,
+      "mae_ah": 0.11465211711629718,
+      "max_future_cycle_error": 10,
+      "median_absolute_percentage_error": 5.5515908458885646,
+      "predictable_decision_points": 7910,
+      "rmse_ah": 0.16498454923370912,
+      "trajectory_count": 86,
+      "valid_held_out_forecasts": 4642
+    },
+    "prediction_method": {
+      "minimum_history_points": 4,
+      "name": "weighted_recent_linear_capacity",
+      "positive_slope_clamp": 0.0,
+      "prediction_clamp": "[0, current capacity]",
+      "uncertainty_cap_fraction_of_nominal": 0.25,
+      "weights_oldest_to_newest": "linear from 0.5 to 1.0",
+      "window_size": 8
+    }
+  },
+  "provenance": {
+    "config_sha256": "7cab10792735141bd72eafb4021afbcb0ee695612f6320d44cf9e3d6bd0b62f5",
+    "data_classification": "derived-real",
+    "input_kind": "canonical_trajectories",
+    "input_sha256": "93b5e9edba0d0fecb9de1e3bbccfdd8c46882901175ea58b77da2a3f24977b29",
+    "prediction_evaluation_sha256": "675bdc47ee3a131a54c0b7b584e514aa052a000680821455006f4ccd77e6caa3",
+    "provenance_sha256": "69f4aa0217531db817c00528211f6862d134e4fc419105a6ff7ba3f36c4a8dd3",
+    "source_dataset": "deep_sorting_reused_batteries",
+    "source_provenance_sha256": "7fed5b93e04fd5f78ea2a6a9b13b28a60229a8e87b854a2c83961b930a326387"
+  },
+  "qaoa_quality": {
+    "backend_labels": [
+      "basic_simulator"
+    ],
+    "mean_best_sampled_gap": 0.08947769962579022,
+    "mean_feasible_probability_mass": 0.29306640625,
+    "mean_optimum_probability_mass": 0.003955078125,
+    "mean_timings_ms": {
+      "ansatz_build_ms": 3.1560724000883056,
+      "backend_sampling_ms": 12.981467049576167,
+      "parameter_optimization_ms": 1383.4204016500735,
+      "qubo_mapping_operator_ms": 47.11015175016655,
+      "result_diagnostics_ms": 10.147050049636164,
+      "total_ms": 1509.0103417993305,
+      "transpilation_ms": 20.041921549818653
+    },
+    "median_best_sampled_gap": 0.0,
+    "optimum_sample_rate": 0.85,
+    "trials_with_feasible_sample": 20,
+    "valid_trials": 20
+  },
+  "redistribution_license_verified": false,
+  "schema_version": "1.0",
+  "source_dataset": "deep_sorting_reused_batteries",
+  "trial_count": 20
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>RePack-Q · Runtime diagnostics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="js/runtimeProbe.js"></script>
+  </head>
+  <body>
+    <main class="probe-shell">
+      <a class="probe-back" href="index.html">← Return to workbench</a>
+      <header class="probe-heading">
+        <p class="eyebrow">RePack-Q · integration diagnostics</p>
+        <h1>Inspect the host bridge</h1>
+        <p class="probe-lede">This read-only report lists matching public browser object names and method names. It does not read object values, inspect credentials, or call host methods.</p>
+      </header>
+      <section class="probe-card" aria-labelledby="probe-title">
+        <div class="probe-card-heading">
+          <div><p class="eyebrow">Qollab browser runtime</p><h2 id="probe-title">Host surface</h2></div>
+          <span id="runtime-state" class="probe-state" role="status" aria-live="polite">Inspecting…</span>
+        </div>
+        <p id="runtime-copy" class="probe-copy">The report checks the page and accessible parent frame for likely Python or backend objects.</p>
+        <div class="probe-actions">
+          <button id="inspect-button" type="button">Refresh host report</button>
+          <button id="copy-button" class="secondary" type="button">Copy report</button>
+          <button id="smoke-button" type="button" disabled>Run Python smoke test</button>
+          <button id="qaoa-button" type="button" disabled>Run Task 5 toy QAOA</button>
+        </div>
+        <pre id="runtime-result" aria-label="Runtime diagnostic report" tabindex="0">Waiting for the host report…</pre>
+      </section>
+      <p class="probe-footnote">The smoke and toy QAOA controls remain disabled unless a verified adapter is already registered. The toy run uses synthetic input and does not represent battery results.</p>
+    </main>
+    <style>
+      body { background: #f4f4ec; }
+      .probe-shell { width: min(800px, calc(100% - 32px)); margin: 0 auto; padding: clamp(30px, 7vw, 80px) 0; }
+      .probe-back { display: inline-block; margin-bottom: 38px; color: #315b3e; font-size: 11px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .probe-heading { margin-bottom: 25px; }
+      .probe-heading h1 { max-width: 15ch; color: #17251d; font-size: clamp(38px, 7vw, 64px); }
+      .probe-lede, .probe-copy, .probe-footnote { color: #68766d; font-size: 12px; line-height: 1.65; }
+      .probe-card { padding: clamp(18px, 4vw, 30px); border: 1px solid #dce1d7; border-radius: 20px; background: #fffefa; box-shadow: var(--shadow-panel); }
+      .probe-card-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; }
+      .probe-card-heading h2 { margin: 0; font-size: 20px; letter-spacing: -.04em; }
+      .probe-state { padding: 7px 10px; border-radius: 99px; background: #edf3e7; color: #47634f; font-size: 9px; font-weight: 750; }
+      .probe-copy { margin: 15px 0; }
+      .probe-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+      .probe-actions button { min-height: 37px; padding: 0 12px; border: 1px solid #dce4d9; border-radius: 8px; background: #234f38; color: #fff; cursor: pointer; font-size: 10px; font-weight: 750; }
+      .probe-actions button.secondary { background: #f7f9f3; color: #264738; }
+      .probe-actions button:disabled { opacity: .45; cursor: not-allowed; }
+      .probe-actions button:focus-visible, #runtime-result:focus-visible { outline: 3px solid #a1bd4b; outline-offset: 3px; }
+      #runtime-result { max-height: 430px; overflow: auto; margin: 18px 0 0; padding: 14px; border: 1px solid #e2e8de; border-radius: 10px; background: #f7f9f4; color: #26382d; font: 11px/1.55 "DM Mono", ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+      .probe-footnote { margin-top: 12px; font-size: 10px; }
+      @media (max-width: 480px) { .probe-card-heading { flex-direction: column; } .probe-actions button { flex: 1 1 100%; } }
+    </style>
+  </body>
+</html>

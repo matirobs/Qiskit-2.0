@@ -1,0 +1,4 @@
+Battery_ID,Protocol_ID,Cycle_Index,Step_Index,Discharge_Capacity(Ah),Internal_Resistance(Ohm),Temperature(C)
+Cell-Bad,P-09,not-a-cycle,15,1.90,0.040,25.0
+Cell-Bad,P-09,1,15,4.9,0.040,25.0
+Cell-Bad,P-09,6,15,0,0,200

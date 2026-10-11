@@ -1,0 +1,4 @@
+cell_id,protocol,cycle_index,step_index,capacity_ah,resistance_ohm,temperature_c
+Cell-X,Route-B,1,15,"1,91",0.050,24.5
+Cell-X,Route-B,2,15,1.90,0.051,24.7
+Cell-X,Route-B,6,15,1.87,0.053,25.1

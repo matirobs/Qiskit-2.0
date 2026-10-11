@@ -1,0 +1,6 @@
+Battery_ID,Protocol_ID,Cycle_Index,Step_Index,Discharge_Capacity(Ah),Internal_Resistance(Ohm),Temperature(C)
+Cell-01,P-04,1,14,0,,25.0
+Cell-01,P-04,1,15,1.90,0.041,25.6
+Cell-01,P-04,2,15,1.89,0.042,25.8
+Cell-01,P-04,6,15,1.88,0.043,26.0
+Cell-01,P-04,11,15,1.82,0.045,26.4

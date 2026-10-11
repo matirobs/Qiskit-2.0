@@ -1,0 +1,398 @@
+{
+  "contains_cell_level_records": false,
+  "data_classification": "derived-real",
+  "provenance": {
+    "config_sha256": "7cab10792735141bd72eafb4021afbcb0ee695612f6320d44cf9e3d6bd0b62f5",
+    "data_classification": "derived-real",
+    "input_kind": "canonical_trajectories",
+    "input_sha256": "93b5e9edba0d0fecb9de1e3bbccfdd8c46882901175ea58b77da2a3f24977b29",
+    "prediction_evaluation_sha256": "675bdc47ee3a131a54c0b7b584e514aa052a000680821455006f4ccd77e6caa3",
+    "provenance_sha256": "69f4aa0217531db817c00528211f6862d134e4fc419105a6ff7ba3f36c4a8dd3",
+    "source_dataset": "deep_sorting_reused_batteries",
+    "source_provenance_sha256": "7fed5b93e04fd5f78ea2a6a9b13b28a60229a8e87b854a2c83961b930a326387"
+  },
+  "redistribution_license_verified": false,
+  "schema_version": "1.0",
+  "selection": {
+    "basis": "first configured seed per candidate size, then seed order; no held-out outcomes inspected",
+    "mode": "predeclared_seed_subset"
+  },
+  "source_dataset": "deep_sorting_reused_batteries",
+  "trials": [
+    {
+      "algorithms": {
+        "compatibility_greedy": {
+          "current_capacity_cv": 0.006443613766008239,
+          "current_capacity_spread_ah": 0.03119099999999997,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 1.847713455583267,
+          "observed_pack_divergence": 0.05265997333227177,
+          "observed_usable_capacity_ah": 1.432242,
+          "predicted_pack_divergence": 0.0851180475115305,
+          "runtime_ms": 1.8997199986188207
+        },
+        "exact_enumeration": {
+          "current_capacity_cv": 0.006443613766008239,
+          "current_capacity_spread_ah": 0.03119099999999997,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 1.847713455583267,
+          "observed_pack_divergence": 0.05265997333227177,
+          "observed_usable_capacity_ah": 1.432242,
+          "predicted_pack_divergence": 0.0851180475115305,
+          "runtime_ms": 3.94740199772059
+        },
+        "qaoa": {
+          "backend": "basic_simulator",
+          "backend_jobs_submitted": 1,
+          "best_feasible_optimality_gap": 0.0,
+          "circuit": {
+            "depth": 42,
+            "mapping_verified_exhaustively": true,
+            "measurement_depth": 43,
+            "qubits": 8,
+            "reps": 1,
+            "size": 108,
+            "transpiled_depth": 41,
+            "transpiled_qubits": 8,
+            "transpiled_size": 100
+          },
+          "current_capacity_cv": 0.006443613766008239,
+          "current_capacity_spread_ah": 0.03119099999999997,
+          "feasible": true,
+          "feasible_probability_mass": 0.2919921875,
+          "objective_gap": 0.0,
+          "objective_value": 1.847713455583267,
+          "observed_pack_divergence": 0.05265997333227177,
+          "observed_usable_capacity_ah": 1.432242,
+          "optimizer": {
+            "budget": null,
+            "evaluations": 23,
+            "method": null
+          },
+          "optimum_probability_mass": 0.00390625,
+          "predicted_pack_divergence": 0.0851180475115305,
+          "runtime_ms": 1844.2049570003292,
+          "shots_observed": 1024,
+          "shots_requested": 1024,
+          "single_backend_job": true,
+          "status_message": "QAOA produced at least one feasible K-cell sample.",
+          "timings_ms": {
+            "ansatz_build_ms": 3.380063000804512,
+            "backend_sampling_ms": 14.076488998398418,
+            "parameter_optimization_ms": 348.2892290012387,
+            "qubo_mapping_operator_ms": 749.4057910007541,
+            "result_diagnostics_ms": 10.168862998398254,
+            "total_ms": 1844.2049570003292,
+            "transpilation_ms": 76.79258099960862
+          }
+        },
+        "simulated_annealing": {
+          "current_capacity_cv": 0.006443613766008239,
+          "current_capacity_spread_ah": 0.03119099999999997,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 1.847713455583267,
+          "observed_pack_divergence": 0.05265997333227177,
+          "observed_usable_capacity_ah": 1.432242,
+          "predicted_pack_divergence": 0.0851180475115305,
+          "runtime_ms": 61.584480998135405
+        },
+        "soh_sort": {
+          "current_capacity_cv": 0.005048426006503333,
+          "current_capacity_spread_ah": 0.026578999999999908,
+          "feasible": true,
+          "objective_gap": 2.174463469967746,
+          "objective_value": 2.973823551882132,
+          "observed_pack_divergence": 0.08048717901563406,
+          "observed_usable_capacity_ah": 1.431105,
+          "predicted_pack_divergence": 0.11148013626069778,
+          "runtime_ms": 0.013635999493999407
+        }
+      },
+      "candidate_count": 8,
+      "decision_cycle": 16,
+      "horizon_cycles": 200,
+      "objective_ablation": {
+        "exact_current_only": {
+          "current_capacity_cv": 0.002811906522515876,
+          "current_capacity_spread_ah": 0.014062000000000019,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 0.7993600819143861,
+          "observed_pack_divergence": 0.059397017047966974,
+          "observed_usable_capacity_ah": 1.432242,
+          "predicted_pack_divergence": 0.12752470630532486,
+          "runtime_ms": 3.7585019999824
+        },
+        "exact_trajectory_aware": {
+          "current_capacity_cv": 0.006443613766008239,
+          "current_capacity_spread_ah": 0.03119099999999997,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 1.847713455583267,
+          "observed_pack_divergence": 0.05265997333227177,
+          "observed_usable_capacity_ah": 1.432242,
+          "predicted_pack_divergence": 0.0851180475115305,
+          "runtime_ms": 3.94740199772059
+        },
+        "opd_improvement_trajectory_aware_minus_current": 0.006737043715695203,
+        "trajectory_aware_lower_opd": true
+      },
+      "pack_size": 4,
+      "seed": 11,
+      "trial_id": "n8-seed11"
+    },
+    {
+      "algorithms": {
+        "compatibility_greedy": {
+          "current_capacity_cv": 0.006173650791057661,
+          "current_capacity_spread_ah": 0.0320959999999999,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 3.13624367036515,
+          "observed_pack_divergence": 0.06999217467908524,
+          "observed_usable_capacity_ah": 1.372339,
+          "predicted_pack_divergence": 0.047342549675114476,
+          "runtime_ms": 1.8771869981719647
+        },
+        "exact_enumeration": {
+          "current_capacity_cv": 0.006173650791057661,
+          "current_capacity_spread_ah": 0.0320959999999999,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 3.13624367036515,
+          "observed_pack_divergence": 0.06999217467908524,
+          "observed_usable_capacity_ah": 1.372339,
+          "predicted_pack_divergence": 0.047342549675114476,
+          "runtime_ms": 4.081054998096079
+        },
+        "qaoa": {
+          "backend": "basic_simulator",
+          "backend_jobs_submitted": 1,
+          "best_feasible_optimality_gap": 0.0,
+          "circuit": {
+            "depth": 42,
+            "mapping_verified_exhaustively": true,
+            "measurement_depth": 43,
+            "qubits": 8,
+            "reps": 1,
+            "size": 108,
+            "transpiled_depth": 42,
+            "transpiled_qubits": 8,
+            "transpiled_size": 108
+          },
+          "current_capacity_cv": 0.006173650791057661,
+          "current_capacity_spread_ah": 0.0320959999999999,
+          "feasible": true,
+          "feasible_probability_mass": 0.3388671875,
+          "objective_gap": 0.0,
+          "objective_value": 3.13624367036515,
+          "observed_pack_divergence": 0.06999217467908524,
+          "observed_usable_capacity_ah": 1.372339,
+          "optimizer": {
+            "budget": null,
+            "evaluations": 28,
+            "method": null
+          },
+          "optimum_probability_mass": 0.0107421875,
+          "predicted_pack_divergence": 0.047342549675114476,
+          "runtime_ms": 470.702597998752,
+          "shots_observed": 1024,
+          "shots_requested": 1024,
+          "single_backend_job": true,
+          "status_message": "QAOA produced at least one feasible K-cell sample.",
+          "timings_ms": {
+            "ansatz_build_ms": 2.6323919992137235,
+            "backend_sampling_ms": 14.549008999892976,
+            "parameter_optimization_ms": 416.68290899906424,
+            "qubo_mapping_operator_ms": 9.582258000591537,
+            "result_diagnostics_ms": 9.222444001352414,
+            "total_ms": 470.702597998752,
+            "transpilation_ms": 17.98008299738285
+          }
+        },
+        "simulated_annealing": {
+          "current_capacity_cv": 0.006173650791057661,
+          "current_capacity_spread_ah": 0.0320959999999999,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 3.13624367036515,
+          "observed_pack_divergence": 0.06999217467908524,
+          "observed_usable_capacity_ah": 1.372339,
+          "predicted_pack_divergence": 0.047342549675114476,
+          "runtime_ms": 63.17499500073609
+        },
+        "soh_sort": {
+          "current_capacity_cv": 0.003715133536832802,
+          "current_capacity_spread_ah": 0.01870700000000003,
+          "feasible": true,
+          "objective_gap": 1.0629740724083687,
+          "objective_value": 1.9120855435348032,
+          "observed_pack_divergence": 0.10227098595718613,
+          "observed_usable_capacity_ah": 1.35379,
+          "predicted_pack_divergence": 0.18263317266154727,
+          "runtime_ms": 0.013315999240148813
+        }
+      },
+      "candidate_count": 8,
+      "decision_cycle": 16,
+      "horizon_cycles": 200,
+      "objective_ablation": {
+        "exact_current_only": {
+          "current_capacity_cv": 0.0039423181395003256,
+          "current_capacity_spread_ah": 0.017133999999999983,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 0.8491114711264346,
+          "observed_pack_divergence": 0.06039367671767148,
+          "observed_usable_capacity_ah": 1.35379,
+          "predicted_pack_divergence": 0.203601619463724,
+          "runtime_ms": 3.4636319978744723
+        },
+        "exact_trajectory_aware": {
+          "current_capacity_cv": 0.006173650791057661,
+          "current_capacity_spread_ah": 0.0320959999999999,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 3.13624367036515,
+          "observed_pack_divergence": 0.06999217467908524,
+          "observed_usable_capacity_ah": 1.372339,
+          "predicted_pack_divergence": 0.047342549675114476,
+          "runtime_ms": 4.081054998096079
+        },
+        "opd_improvement_trajectory_aware_minus_current": -0.009598497961413759,
+        "trajectory_aware_lower_opd": false
+      },
+      "pack_size": 4,
+      "seed": 23,
+      "trial_id": "n8-seed23"
+    },
+    {
+      "algorithms": {
+        "compatibility_greedy": {
+          "current_capacity_cv": 0.020318893721311314,
+          "current_capacity_spread_ah": 0.1049389999999999,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 2.642091919934238,
+          "observed_pack_divergence": 0.08310680979942825,
+          "observed_usable_capacity_ah": 1.518024,
+          "predicted_pack_divergence": 0.01695734977044592,
+          "runtime_ms": 2.408817999821622
+        },
+        "exact_enumeration": {
+          "current_capacity_cv": 0.020318893721311314,
+          "current_capacity_spread_ah": 0.1049389999999999,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 2.642091919934238,
+          "observed_pack_divergence": 0.08310680979942825,
+          "observed_usable_capacity_ah": 1.518024,
+          "predicted_pack_divergence": 0.01695734977044592,
+          "runtime_ms": 3.903999000613112
+        },
+        "qaoa": {
+          "backend": "basic_simulator",
+          "backend_jobs_submitted": 1,
+          "best_feasible_optimality_gap": 0.0,
+          "circuit": {
+            "depth": 42,
+            "mapping_verified_exhaustively": true,
+            "measurement_depth": 43,
+            "qubits": 8,
+            "reps": 1,
+            "size": 108,
+            "transpiled_depth": 42,
+            "transpiled_qubits": 8,
+            "transpiled_size": 108
+          },
+          "current_capacity_cv": 0.020318893721311314,
+          "current_capacity_spread_ah": 0.1049389999999999,
+          "feasible": true,
+          "feasible_probability_mass": 0.2451171875,
+          "objective_gap": 0.0,
+          "objective_value": 2.642091919934238,
+          "observed_pack_divergence": 0.08310680979942825,
+          "observed_usable_capacity_ah": 1.518024,
+          "optimizer": {
+            "budget": null,
+            "evaluations": 47,
+            "method": null
+          },
+          "optimum_probability_mass": 0.0029296875,
+          "predicted_pack_divergence": 0.01695734977044592,
+          "runtime_ms": 712.944074999541,
+          "shots_observed": 1024,
+          "shots_requested": 1024,
+          "single_backend_job": true,
+          "status_message": "QAOA produced at least one feasible K-cell sample.",
+          "timings_ms": {
+            "ansatz_build_ms": 2.958031000162009,
+            "backend_sampling_ms": 11.177760999999009,
+            "parameter_optimization_ms": 665.3564000007464,
+            "qubo_mapping_operator_ms": 9.746769999765093,
+            "result_diagnostics_ms": 8.649082999909297,
+            "total_ms": 712.944074999541,
+            "transpilation_ms": 14.991667001595488
+          }
+        },
+        "simulated_annealing": {
+          "current_capacity_cv": 0.020318893721311314,
+          "current_capacity_spread_ah": 0.1049389999999999,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 2.642091919934238,
+          "observed_pack_divergence": 0.08310680979942825,
+          "observed_usable_capacity_ah": 1.518024,
+          "predicted_pack_divergence": 0.01695734977044592,
+          "runtime_ms": 72.24883399976534
+        },
+        "soh_sort": {
+          "current_capacity_cv": 0.009038617497190553,
+          "current_capacity_spread_ah": 0.0429139999999999,
+          "feasible": true,
+          "objective_gap": 1.2324455232871998,
+          "objective_value": 2.0835982282746106,
+          "observed_pack_divergence": 0.015177469758839504,
+          "observed_usable_capacity_ah": 1.771105,
+          "predicted_pack_divergence": 0.1637244677094784,
+          "runtime_ms": 0.009727998985908926
+        }
+      },
+      "candidate_count": 8,
+      "decision_cycle": 16,
+      "horizon_cycles": 200,
+      "objective_ablation": {
+        "exact_current_only": {
+          "current_capacity_cv": 0.01310468780395521,
+          "current_capacity_spread_ah": 0.05892999999999993,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 0.8511527049874108,
+          "observed_pack_divergence": 0.07049592218162394,
+          "observed_usable_capacity_ah": 1.520125,
+          "predicted_pack_divergence": 0.0777268617140625,
+          "runtime_ms": 3.782055999181466
+        },
+        "exact_trajectory_aware": {
+          "current_capacity_cv": 0.020318893721311314,
+          "current_capacity_spread_ah": 0.1049389999999999,
+          "feasible": true,
+          "objective_gap": 0.0,
+          "objective_value": 2.642091919934238,
+          "observed_pack_divergence": 0.08310680979942825,
+          "observed_usable_capacity_ah": 1.518024,
+          "predicted_pack_divergence": 0.01695734977044592,
+          "runtime_ms": 3.903999000613112
+        },
+        "opd_improvement_trajectory_aware_minus_current": -0.012610887617804309,
+        "trajectory_aware_lower_opd": false
+      },
+      "pack_size": 4,
+      "seed": 37,
+      "trial_id": "n8-seed37"
+    }
+  ]
+}

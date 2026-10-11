@@ -1,0 +1,2539 @@
+{
+  "algorithm": "qaoa",
+  "backend": "basic_simulator",
+  "backend_jobs_submitted": 1,
+  "best_feasible_optimality_gap": 0.0,
+  "best_feasible_sample": {
+    "bits": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    "bitstring": "10101010",
+    "cardinality": 4,
+    "count": 11,
+    "feasible": true,
+    "objective_value": 0.7492346364406454,
+    "probability": 0.0107421875,
+    "qubo_energy": 0.749234636440633,
+    "selected_cell_ids": [
+      "SYN-02",
+      "SYN-04",
+      "SYN-06",
+      "SYN-08"
+    ],
+    "selected_indices": [
+      1,
+      3,
+      5,
+      7
+    ]
+  },
+  "cardinality_violation_sample": {
+    "bits": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "bitstring": "00101010",
+    "cardinality": 3,
+    "count": 2,
+    "feasible": false,
+    "objective_value": 0.18228748562213515,
+    "probability": 0.001953125,
+    "qubo_energy": 9.399050518981944,
+    "selected_cell_ids": [
+      "SYN-02",
+      "SYN-04",
+      "SYN-06"
+    ],
+    "selected_indices": [
+      1,
+      3,
+      5
+    ]
+  },
+  "circuit": {
+    "depth": 42,
+    "mapping_verified_exhaustively": true,
+    "measurement_depth": 43,
+    "qubits": 8,
+    "reps": 1,
+    "size": 108,
+    "transpiled_depth": 42,
+    "transpiled_qubits": 8,
+    "transpiled_size": 108
+  },
+  "data_classification": "synthetic-fixture",
+  "exact_optimal_objective_value": 0.7492346364406454,
+  "exact_result": {
+    "algorithm": "exact_enumeration",
+    "current_capacity_cv": 0.022336370218046533,
+    "current_capacity_spread_ah": 0.09400000000000008,
+    "feasible": true,
+    "metadata": {
+      "evaluated_subsets": 70,
+      "feasible_qubo_optimum_energy": 0.749234636440633,
+      "objective_breakdown": {
+        "capacity_mismatch": 1.0318958172745416,
+        "cardinality_penalty": 0.0,
+        "future_mismatch": 0.06626947307711575,
+        "health_reward": -0.27158333333333334,
+        "resistance_mismatch": 0.0,
+        "temperature_mismatch": 0.0,
+        "total": 0.7492346364406454,
+        "uncertainty_penalty": -0.07734732057767875
+      },
+      "objective_mode": "trajectory_aware",
+      "penalty_calibration_doublings": 0,
+      "pool_id": "synthetic-ui-cycle-76-h200",
+      "qubo_global_minimum_feasible": true,
+      "qubo_penalty": 9.21676303335983,
+      "source_dataset": [
+        "synthetic_fixture"
+      ],
+      "tied_optima": [
+        [
+          1,
+          3,
+          5,
+          7
+        ]
+      ],
+      "tied_optima_count": 1,
+      "tied_optima_truncated": false
+    },
+    "objective_value": 0.7492346364406454,
+    "observed_pack_divergence": null,
+    "observed_usable_capacity_ah": null,
+    "predicted_pack_divergence": 0.020827490759672787,
+    "resistance_spread_ohm": null,
+    "runtime_ms": 4.240146998199634,
+    "selected_cell_ids": [
+      "SYN-02",
+      "SYN-04",
+      "SYN-06",
+      "SYN-08"
+    ],
+    "selected_indices": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "usable_pack_capacity_ah": 1.587
+  },
+  "expected_energy": 17.76618920596663,
+  "feasible": true,
+  "feasible_probability_mass": 0.2890625,
+  "feasible_samples": [
+    {
+      "bits": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "bitstring": "10101010",
+      "cardinality": 4,
+      "count": 11,
+      "feasible": true,
+      "objective_value": 0.7492346364406454,
+      "probability": 0.0107421875,
+      "qubo_energy": 0.749234636440633,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-04",
+        "SYN-06",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        1,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "bitstring": "01101010",
+      "cardinality": 4,
+      "count": 3,
+      "feasible": true,
+      "objective_value": 1.138291315107399,
+      "probability": 0.0029296875,
+      "qubo_energy": 1.1382913151073808,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-04",
+        "SYN-06",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        1,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "bitstring": "11101000",
+      "cardinality": 4,
+      "count": 2,
+      "feasible": true,
+      "objective_value": 1.1871027513850976,
+      "probability": 0.001953125,
+      "qubo_energy": 1.1871027513850834,
+      "selected_cell_ids": [
+        "SYN-04",
+        "SYN-06",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "bitstring": "11001010",
+      "cardinality": 4,
+      "count": 4,
+      "feasible": true,
+      "objective_value": 1.3620291949400887,
+      "probability": 0.00390625,
+      "qubo_energy": 1.3620291949400496,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-04",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        1,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "bitstring": "01010101",
+      "cardinality": 4,
+      "count": 8,
+      "feasible": true,
+      "objective_value": 1.4075528148245189,
+      "probability": 0.0078125,
+      "qubo_energy": 1.4075528148244842,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-03",
+        "SYN-05",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "bitstring": "01011010",
+      "cardinality": 4,
+      "count": 17,
+      "feasible": true,
+      "objective_value": 1.6516559397091743,
+      "probability": 0.0166015625,
+      "qubo_energy": 1.6516559397091726,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-04",
+        "SYN-05",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        1,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "bitstring": "11100010",
+      "cardinality": 4,
+      "count": 18,
+      "feasible": true,
+      "objective_value": 1.7093362054259738,
+      "probability": 0.017578125,
+      "qubo_energy": 1.70933620542597,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-06",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        1,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "bitstring": "01001011",
+      "cardinality": 4,
+      "count": 18,
+      "feasible": true,
+      "objective_value": 1.8073180445406343,
+      "probability": 0.017578125,
+      "qubo_energy": 1.807318044540608,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-04",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "bitstring": "01011001",
+      "cardinality": 4,
+      "count": 5,
+      "feasible": true,
+      "objective_value": 2.0935385405188485,
+      "probability": 0.0048828125,
+      "qubo_energy": 2.09353854051885,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-04",
+        "SYN-05",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        0,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "bitstring": "00010111",
+      "cardinality": 4,
+      "count": 9,
+      "feasible": true,
+      "objective_value": 2.104925978537034,
+      "probability": 0.0087890625,
+      "qubo_energy": 2.104925978537011,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-03",
+        "SYN-05"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "bitstring": "00011011",
+      "cardinality": 4,
+      "count": 11,
+      "feasible": true,
+      "objective_value": 2.2212547183646953,
+      "probability": 0.0107421875,
+      "qubo_energy": 2.221254718364648,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-04",
+        "SYN-05"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "bitstring": "01010110",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 2.527887124639196,
+      "probability": 0.0009765625,
+      "qubo_energy": 2.5278871246391503,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-03",
+        "SYN-05",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bitstring": "00101011",
+      "cardinality": 4,
+      "count": 6,
+      "feasible": true,
+      "objective_value": 2.600654551709778,
+      "probability": 0.005859375,
+      "qubo_energy": 2.6006545517097095,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-04",
+        "SYN-06"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "bitstring": "01111000",
+      "cardinality": 4,
+      "count": 2,
+      "feasible": true,
+      "objective_value": 2.61014860077898,
+      "probability": 0.001953125,
+      "qubo_energy": 2.610148600778942,
+      "selected_cell_ids": [
+        "SYN-04",
+        "SYN-05",
+        "SYN-06",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "bitstring": "01000111",
+      "cardinality": 4,
+      "count": 2,
+      "feasible": true,
+      "objective_value": 2.6699217335690784,
+      "probability": 0.001953125,
+      "qubo_energy": 2.669921733569055,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-03",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "bitstring": "11011000",
+      "cardinality": 4,
+      "count": 5,
+      "feasible": true,
+      "objective_value": 2.7252894362156876,
+      "probability": 0.0048828125,
+      "qubo_energy": 2.7252894362156894,
+      "selected_cell_ids": [
+        "SYN-04",
+        "SYN-05",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "bitstring": "11010010",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 2.781683149344424,
+      "probability": 0.0009765625,
+      "qubo_energy": 2.7816831493443885,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-05",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        1,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "bitstring": "10011010",
+      "cardinality": 4,
+      "count": 3,
+      "feasible": true,
+      "objective_value": 2.7881873864078672,
+      "probability": 0.0029296875,
+      "qubo_energy": 2.7881873864078273,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-04",
+        "SYN-05",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        1,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "bitstring": "01100011",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 2.8774825379870443,
+      "probability": 0.0009765625,
+      "qubo_energy": 2.8774825379869924,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-06",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "bitstring": "01101001",
+      "cardinality": 4,
+      "count": 3,
+      "feasible": true,
+      "objective_value": 2.9737044390005627,
+      "probability": 0.0029296875,
+      "qubo_energy": 2.9737044390005565,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-04",
+        "SYN-06",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        0,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bitstring": "10001011",
+      "cardinality": 4,
+      "count": 7,
+      "feasible": true,
+      "objective_value": 2.975876433067021,
+      "probability": 0.0068359375,
+      "qubo_energy": 2.9758764330670004,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-04",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "bitstring": "10111000",
+      "cardinality": 4,
+      "count": 4,
+      "feasible": true,
+      "objective_value": 3.071288047491344,
+      "probability": 0.00390625,
+      "qubo_energy": 3.071288047491322,
+      "selected_cell_ids": [
+        "SYN-04",
+        "SYN-05",
+        "SYN-06",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "bitstring": "00011101",
+      "cardinality": 4,
+      "count": 9,
+      "feasible": true,
+      "objective_value": 3.086267818547925,
+      "probability": 0.0087890625,
+      "qubo_energy": 3.0862678185478813,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-03",
+        "SYN-04",
+        "SYN-05"
+      ],
+      "selected_indices": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "bitstring": "11000011",
+      "cardinality": 4,
+      "count": 2,
+      "feasible": true,
+      "objective_value": 3.1519658563833066,
+      "probability": 0.001953125,
+      "qubo_energy": 3.151965856383299,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "bitstring": "11001001",
+      "cardinality": 4,
+      "count": 3,
+      "feasible": true,
+      "objective_value": 3.2004241808518628,
+      "probability": 0.0029296875,
+      "qubo_energy": 3.200424180851826,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-04",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "bitstring": "11110000",
+      "cardinality": 4,
+      "count": 6,
+      "feasible": true,
+      "objective_value": 3.3110027824370247,
+      "probability": 0.005859375,
+      "qubo_energy": 3.3110027824370007,
+      "selected_cell_ids": [
+        "SYN-05",
+        "SYN-06",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "bitstring": "10110010",
+      "cardinality": 4,
+      "count": 3,
+      "feasible": true,
+      "objective_value": 3.3835749585572192,
+      "probability": 0.0029296875,
+      "qubo_energy": 3.3835749585572046,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-05",
+        "SYN-06",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        1,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "bitstring": "01110001",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 3.4021093697007103,
+      "probability": 0.0009765625,
+      "qubo_energy": 3.402109369700696,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-05",
+        "SYN-06",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        0,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "bitstring": "01001101",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 3.4413170306049685,
+      "probability": 0.0009765625,
+      "qubo_energy": 3.441317030604935,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-03",
+        "SYN-04",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        0,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "bitstring": "10101001",
+      "cardinality": 4,
+      "count": 3,
+      "feasible": true,
+      "objective_value": 3.4668708275406206,
+      "probability": 0.0029296875,
+      "qubo_energy": 3.4668708275406175,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-04",
+        "SYN-06",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "bitstring": "01001110",
+      "cardinality": 4,
+      "count": 9,
+      "feasible": true,
+      "objective_value": 3.509568848864438,
+      "probability": 0.0087890625,
+      "qubo_energy": 3.5095688488644043,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-03",
+        "SYN-04",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "bitstring": "00110011",
+      "cardinality": 4,
+      "count": 2,
+      "feasible": true,
+      "objective_value": 3.5394997734745735,
+      "probability": 0.001953125,
+      "qubo_energy": 3.5394997734745033,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-05",
+        "SYN-06"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "bitstring": "11010001",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 3.5679956437009905,
+      "probability": 0.0009765625,
+      "qubo_energy": 3.5679956437009537,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-05",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "bitstring": "00011110",
+      "cardinality": 4,
+      "count": 5,
+      "feasible": true,
+      "objective_value": 3.668808954702683,
+      "probability": 0.0048828125,
+      "qubo_energy": 3.6688089547026266,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-03",
+        "SYN-04",
+        "SYN-05"
+      ],
+      "selected_indices": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "bitstring": "10100011",
+      "cardinality": 4,
+      "count": 5,
+      "feasible": true,
+      "objective_value": 3.674305701009204,
+      "probability": 0.0048828125,
+      "qubo_energy": 3.6743057010091604,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-06",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        5,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "bitstring": "00111001",
+      "cardinality": 4,
+      "count": 4,
+      "feasible": true,
+      "objective_value": 3.845668217463092,
+      "probability": 0.00390625,
+      "qubo_energy": 3.8456682174630714,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-04",
+        "SYN-05",
+        "SYN-06"
+      ],
+      "selected_indices": [
+        0,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "bitstring": "10010011",
+      "cardinality": 4,
+      "count": 4,
+      "feasible": true,
+      "objective_value": 3.8538881869807957,
+      "probability": 0.00390625,
+      "qubo_energy": 3.853888186980768,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-05",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        4,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "bitstring": "11100001",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 3.889179222866029,
+      "probability": 0.0009765625,
+      "qubo_energy": 3.8891792228660336,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-06",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "bitstring": "10011001",
+      "cardinality": 4,
+      "count": 3,
+      "feasible": true,
+      "objective_value": 4.112293054424353,
+      "probability": 0.0029296875,
+      "qubo_energy": 4.112293054424313,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-04",
+        "SYN-05",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "bitstring": "01110100",
+      "cardinality": 4,
+      "count": 4,
+      "feasible": true,
+      "objective_value": 4.64706805330136,
+      "probability": 0.00390625,
+      "qubo_energy": 4.647068053301339,
+      "selected_cell_ids": [
+        "SYN-03",
+        "SYN-05",
+        "SYN-06",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "bitstring": "01100110",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 4.723800182352553,
+      "probability": 0.0009765625,
+      "qubo_energy": 4.723800182352548,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-03",
+        "SYN-06",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "bitstring": "11010100",
+      "cardinality": 4,
+      "count": 6,
+      "feasible": true,
+      "objective_value": 4.742253053418482,
+      "probability": 0.005859375,
+      "qubo_energy": 4.742253053418494,
+      "selected_cell_ids": [
+        "SYN-03",
+        "SYN-05",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        2,
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "bitstring": "00110101",
+      "cardinality": 4,
+      "count": 12,
+      "feasible": true,
+      "objective_value": 4.89002774522779,
+      "probability": 0.01171875,
+      "qubo_energy": 4.890027745227783,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-03",
+        "SYN-05",
+        "SYN-06"
+      ],
+      "selected_indices": [
+        0,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bitstring": "00101110",
+      "cardinality": 4,
+      "count": 2,
+      "feasible": true,
+      "objective_value": 4.898116206367268,
+      "probability": 0.001953125,
+      "qubo_energy": 4.898116206367263,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-03",
+        "SYN-04",
+        "SYN-06"
+      ],
+      "selected_indices": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "bitstring": "01101100",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 4.9245037008790105,
+      "probability": 0.0009765625,
+      "qubo_energy": 4.924503700879001,
+      "selected_cell_ids": [
+        "SYN-03",
+        "SYN-04",
+        "SYN-06",
+        "SYN-07"
+      ],
+      "selected_indices": [
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "bitstring": "10110001",
+      "cardinality": 4,
+      "count": 6,
+      "feasible": true,
+      "objective_value": 5.049128658101988,
+      "probability": 0.005859375,
+      "qubo_energy": 5.049128658101978,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-05",
+        "SYN-06",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "bitstring": "00110110",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 5.131120849854266,
+      "probability": 0.0009765625,
+      "qubo_energy": 5.1311208498542555,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-03",
+        "SYN-05",
+        "SYN-06"
+      ],
+      "selected_indices": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "bitstring": "10010101",
+      "cardinality": 4,
+      "count": 9,
+      "feasible": true,
+      "objective_value": 5.1366967468694655,
+      "probability": 0.0087890625,
+      "qubo_energy": 5.136696746869433,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-03",
+        "SYN-05",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bitstring": "00100111",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 5.19360349419725,
+      "probability": 0.0009765625,
+      "qubo_energy": 5.193603494197205,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-03",
+        "SYN-06"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bitstring": "10001110",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 5.202636813841354,
+      "probability": 0.0009765625,
+      "qubo_energy": 5.202636813841323,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-03",
+        "SYN-04",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        1,
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "bitstring": "11000101",
+      "cardinality": 4,
+      "count": 2,
+      "feasible": true,
+      "objective_value": 5.20376030215308,
+      "probability": 0.001953125,
+      "qubo_energy": 5.203760302153057,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-03",
+        "SYN-07",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "bitstring": "00111100",
+      "cardinality": 4,
+      "count": 3,
+      "feasible": true,
+      "objective_value": 5.541770911355723,
+      "probability": 0.0029296875,
+      "qubo_energy": 5.541770911355698,
+      "selected_cell_ids": [
+        "SYN-03",
+        "SYN-04",
+        "SYN-05",
+        "SYN-06"
+      ],
+      "selected_indices": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bitstring": "10000111",
+      "cardinality": 4,
+      "count": 2,
+      "feasible": true,
+      "objective_value": 5.548869540234907,
+      "probability": 0.001953125,
+      "qubo_energy": 5.548869540234904,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-02",
+        "SYN-03",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        1,
+        2,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "bitstring": "00101101",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 5.709105593296,
+      "probability": 0.0009765625,
+      "qubo_energy": 5.709105593296002,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-03",
+        "SYN-04",
+        "SYN-06"
+      ],
+      "selected_indices": [
+        0,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "bitstring": "10011100",
+      "cardinality": 4,
+      "count": 3,
+      "feasible": true,
+      "objective_value": 5.737694474433828,
+      "probability": 0.0029296875,
+      "qubo_energy": 5.737694474433837,
+      "selected_cell_ids": [
+        "SYN-03",
+        "SYN-04",
+        "SYN-05",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        2,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "bitstring": "10101100",
+      "cardinality": 4,
+      "count": 15,
+      "feasible": true,
+      "objective_value": 5.942179665869597,
+      "probability": 0.0146484375,
+      "qubo_energy": 5.942179665869588,
+      "selected_cell_ids": [
+        "SYN-03",
+        "SYN-04",
+        "SYN-06",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "bitstring": "10001101",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 6.016608062788697,
+      "probability": 0.0009765625,
+      "qubo_energy": 6.016608062788677,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-03",
+        "SYN-04",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "bitstring": "10100110",
+      "cardinality": 4,
+      "count": 1,
+      "feasible": true,
+      "objective_value": 6.045132921825242,
+      "probability": 0.0009765625,
+      "qubo_energy": 6.0451329218252,
+      "selected_cell_ids": [
+        "SYN-02",
+        "SYN-03",
+        "SYN-06",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        1,
+        2,
+        5,
+        7
+      ]
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "bitstring": "10110100",
+      "cardinality": 4,
+      "count": 6,
+      "feasible": true,
+      "objective_value": 6.818596918153167,
+      "probability": 0.005859375,
+      "qubo_energy": 6.818596918153162,
+      "selected_cell_ids": [
+        "SYN-03",
+        "SYN-05",
+        "SYN-06",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "bitstring": "10100101",
+      "cardinality": 4,
+      "count": 15,
+      "feasible": true,
+      "objective_value": 7.200552202300865,
+      "probability": 0.0146484375,
+      "qubo_energy": 7.200552202300827,
+      "selected_cell_ids": [
+        "SYN-01",
+        "SYN-03",
+        "SYN-06",
+        "SYN-08"
+      ],
+      "selected_indices": [
+        0,
+        2,
+        5,
+        7
+      ]
+    }
+  ],
+  "modal_sample": {
+    "bits": [
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "bitstring": "01111011",
+    "cardinality": 6,
+    "count": 25,
+    "feasible": false,
+    "objective_value": 6.5737798119335205,
+    "probability": 0.0244140625,
+    "qubo_energy": 43.440831945372764,
+    "selected_cell_ids": [
+      "SYN-01",
+      "SYN-02",
+      "SYN-04",
+      "SYN-05",
+      "SYN-06",
+      "SYN-07"
+    ],
+    "selected_indices": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "mode": "precomputed-synthetic-replay",
+  "optimizer": {
+    "evaluation_budget": 121,
+    "evaluations": 121,
+    "initial_expected_energy": 39.78031438219029,
+    "message": "Completed deterministic 12\u00d78 grid search and local coordinate refinement.",
+    "mode": "coarse_to_fine_grid",
+    "optimized_expected_energy": 17.76618920596663,
+    "seed": "deterministic_initial_point",
+    "success": null
+  },
+  "optimum_probability_mass": 0.0107421875,
+  "params": {
+    "beta": [
+      1.2762720155208536
+    ],
+    "gamma": [
+      2.356194490192345
+    ]
+  },
+  "penalty": {
+    "base_pair_scale": 2.3041907583399577,
+    "calibration_doublings": 0,
+    "cardinality_penalty": 9.21676303335983,
+    "global_minimum_feasible": true,
+    "penalty_multiplier": 4.0
+  },
+  "pool_id": "synthetic-ui-cycle-76-h200",
+  "probabilities": {
+    "00000010": 0.001953125,
+    "00000011": 0.00390625,
+    "00000100": 0.00390625,
+    "00000101": 0.00390625,
+    "00000110": 0.00390625,
+    "00000111": 0.001953125,
+    "00001000": 0.0029296875,
+    "00001001": 0.0009765625,
+    "00001010": 0.00390625,
+    "00001011": 0.001953125,
+    "00001100": 0.00390625,
+    "00001110": 0.009765625,
+    "00010100": 0.0029296875,
+    "00010101": 0.015625,
+    "00010110": 0.001953125,
+    "00010111": 0.0087890625,
+    "00011001": 0.0029296875,
+    "00011010": 0.0029296875,
+    "00011011": 0.0107421875,
+    "00011101": 0.0087890625,
+    "00011110": 0.0048828125,
+    "00011111": 0.00390625,
+    "00100000": 0.001953125,
+    "00100001": 0.0009765625,
+    "00100010": 0.005859375,
+    "00100100": 0.0009765625,
+    "00100101": 0.0029296875,
+    "00100110": 0.0048828125,
+    "00100111": 0.0009765625,
+    "00101000": 0.0009765625,
+    "00101001": 0.0009765625,
+    "00101010": 0.001953125,
+    "00101011": 0.005859375,
+    "00101100": 0.001953125,
+    "00101101": 0.0009765625,
+    "00101110": 0.001953125,
+    "00110001": 0.001953125,
+    "00110010": 0.0009765625,
+    "00110011": 0.001953125,
+    "00110100": 0.0078125,
+    "00110101": 0.01171875,
+    "00110110": 0.0009765625,
+    "00110111": 0.0078125,
+    "00111001": 0.00390625,
+    "00111011": 0.0078125,
+    "00111100": 0.0029296875,
+    "00111101": 0.0087890625,
+    "00111110": 0.0009765625,
+    "01000000": 0.0009765625,
+    "01000001": 0.001953125,
+    "01000010": 0.009765625,
+    "01000011": 0.0048828125,
+    "01000100": 0.0107421875,
+    "01000101": 0.0126953125,
+    "01000110": 0.001953125,
+    "01000111": 0.001953125,
+    "01001000": 0.00390625,
+    "01001001": 0.005859375,
+    "01001010": 0.0185546875,
+    "01001011": 0.017578125,
+    "01001100": 0.005859375,
+    "01001101": 0.0009765625,
+    "01001110": 0.0087890625,
+    "01001111": 0.0029296875,
+    "01010000": 0.001953125,
+    "01010010": 0.0087890625,
+    "01010100": 0.0029296875,
+    "01010101": 0.0078125,
+    "01010110": 0.0009765625,
+    "01010111": 0.0009765625,
+    "01011000": 0.0048828125,
+    "01011001": 0.0048828125,
+    "01011010": 0.0166015625,
+    "01011011": 0.013671875,
+    "01011101": 0.0048828125,
+    "01011110": 0.0029296875,
+    "01011111": 0.00390625,
+    "01100010": 0.0078125,
+    "01100011": 0.0009765625,
+    "01100100": 0.01171875,
+    "01100110": 0.0009765625,
+    "01100111": 0.00390625,
+    "01101000": 0.0068359375,
+    "01101001": 0.0029296875,
+    "01101010": 0.0029296875,
+    "01101011": 0.005859375,
+    "01101100": 0.0009765625,
+    "01101111": 0.0009765625,
+    "01110000": 0.0009765625,
+    "01110001": 0.0009765625,
+    "01110011": 0.0087890625,
+    "01110100": 0.00390625,
+    "01110101": 0.0126953125,
+    "01110110": 0.0009765625,
+    "01110111": 0.00390625,
+    "01111000": 0.001953125,
+    "01111001": 0.0126953125,
+    "01111010": 0.0048828125,
+    "01111011": 0.0244140625,
+    "01111100": 0.001953125,
+    "01111101": 0.0029296875,
+    "01111111": 0.0009765625,
+    "10000000": 0.0029296875,
+    "10000010": 0.0009765625,
+    "10000101": 0.001953125,
+    "10000110": 0.0009765625,
+    "10000111": 0.001953125,
+    "10001001": 0.0009765625,
+    "10001011": 0.0068359375,
+    "10001100": 0.0009765625,
+    "10001101": 0.0009765625,
+    "10001110": 0.0009765625,
+    "10001111": 0.001953125,
+    "10010001": 0.00390625,
+    "10010010": 0.0009765625,
+    "10010011": 0.00390625,
+    "10010100": 0.0087890625,
+    "10010101": 0.0087890625,
+    "10010111": 0.0078125,
+    "10011000": 0.001953125,
+    "10011001": 0.0029296875,
+    "10011010": 0.0029296875,
+    "10011011": 0.009765625,
+    "10011100": 0.0029296875,
+    "10011101": 0.0048828125,
+    "10100000": 0.0009765625,
+    "10100001": 0.0087890625,
+    "10100010": 0.0078125,
+    "10100011": 0.0048828125,
+    "10100100": 0.0009765625,
+    "10100101": 0.0146484375,
+    "10100110": 0.0009765625,
+    "10100111": 0.0068359375,
+    "10101001": 0.0029296875,
+    "10101010": 0.0107421875,
+    "10101011": 0.009765625,
+    "10101100": 0.0146484375,
+    "10101101": 0.01171875,
+    "10101110": 0.0068359375,
+    "10101111": 0.00390625,
+    "10110000": 0.0048828125,
+    "10110001": 0.005859375,
+    "10110010": 0.0029296875,
+    "10110100": 0.005859375,
+    "10110101": 0.013671875,
+    "10110110": 0.0107421875,
+    "10110111": 0.0009765625,
+    "10111000": 0.00390625,
+    "10111010": 0.009765625,
+    "10111100": 0.0078125,
+    "10111101": 0.00390625,
+    "10111110": 0.001953125,
+    "11000000": 0.0009765625,
+    "11000001": 0.0009765625,
+    "11000010": 0.00390625,
+    "11000011": 0.001953125,
+    "11000100": 0.0048828125,
+    "11000101": 0.001953125,
+    "11000111": 0.0009765625,
+    "11001000": 0.0009765625,
+    "11001001": 0.0029296875,
+    "11001010": 0.00390625,
+    "11001011": 0.0068359375,
+    "11001101": 0.0009765625,
+    "11001110": 0.0009765625,
+    "11001111": 0.0048828125,
+    "11010000": 0.0009765625,
+    "11010001": 0.0009765625,
+    "11010010": 0.0009765625,
+    "11010011": 0.0068359375,
+    "11010100": 0.005859375,
+    "11010101": 0.01171875,
+    "11010110": 0.0029296875,
+    "11010111": 0.0009765625,
+    "11011000": 0.0048828125,
+    "11011001": 0.0068359375,
+    "11011010": 0.0087890625,
+    "11011011": 0.01171875,
+    "11011101": 0.0029296875,
+    "11011110": 0.001953125,
+    "11100000": 0.00390625,
+    "11100001": 0.0009765625,
+    "11100010": 0.017578125,
+    "11100011": 0.0029296875,
+    "11100101": 0.009765625,
+    "11100110": 0.0029296875,
+    "11100111": 0.005859375,
+    "11101000": 0.001953125,
+    "11101001": 0.001953125,
+    "11101010": 0.017578125,
+    "11101011": 0.0048828125,
+    "11101100": 0.0029296875,
+    "11101101": 0.0029296875,
+    "11110000": 0.005859375,
+    "11110010": 0.0029296875,
+    "11110100": 0.0078125,
+    "11110101": 0.001953125,
+    "11110110": 0.005859375,
+    "11111000": 0.0068359375,
+    "11111001": 0.0009765625,
+    "11111010": 0.0087890625,
+    "11111011": 0.0029296875,
+    "11111100": 0.0029296875,
+    "11111110": 0.001953125
+  },
+  "purpose": "UI preview only; this is not a Task 6 battery-data benchmark result.",
+  "raw_counts": {
+    "00000010": 2,
+    "00000011": 4,
+    "00000100": 4,
+    "00000101": 4,
+    "00000110": 4,
+    "00000111": 2,
+    "00001000": 3,
+    "00001001": 1,
+    "00001010": 4,
+    "00001011": 2,
+    "00001100": 4,
+    "00001110": 10,
+    "00010100": 3,
+    "00010101": 16,
+    "00010110": 2,
+    "00010111": 9,
+    "00011001": 3,
+    "00011010": 3,
+    "00011011": 11,
+    "00011101": 9,
+    "00011110": 5,
+    "00011111": 4,
+    "00100000": 2,
+    "00100001": 1,
+    "00100010": 6,
+    "00100100": 1,
+    "00100101": 3,
+    "00100110": 5,
+    "00100111": 1,
+    "00101000": 1,
+    "00101001": 1,
+    "00101010": 2,
+    "00101011": 6,
+    "00101100": 2,
+    "00101101": 1,
+    "00101110": 2,
+    "00110001": 2,
+    "00110010": 1,
+    "00110011": 2,
+    "00110100": 8,
+    "00110101": 12,
+    "00110110": 1,
+    "00110111": 8,
+    "00111001": 4,
+    "00111011": 8,
+    "00111100": 3,
+    "00111101": 9,
+    "00111110": 1,
+    "01000000": 1,
+    "01000001": 2,
+    "01000010": 10,
+    "01000011": 5,
+    "01000100": 11,
+    "01000101": 13,
+    "01000110": 2,
+    "01000111": 2,
+    "01001000": 4,
+    "01001001": 6,
+    "01001010": 19,
+    "01001011": 18,
+    "01001100": 6,
+    "01001101": 1,
+    "01001110": 9,
+    "01001111": 3,
+    "01010000": 2,
+    "01010010": 9,
+    "01010100": 3,
+    "01010101": 8,
+    "01010110": 1,
+    "01010111": 1,
+    "01011000": 5,
+    "01011001": 5,
+    "01011010": 17,
+    "01011011": 14,
+    "01011101": 5,
+    "01011110": 3,
+    "01011111": 4,
+    "01100010": 8,
+    "01100011": 1,
+    "01100100": 12,
+    "01100110": 1,
+    "01100111": 4,
+    "01101000": 7,
+    "01101001": 3,
+    "01101010": 3,
+    "01101011": 6,
+    "01101100": 1,
+    "01101111": 1,
+    "01110000": 1,
+    "01110001": 1,
+    "01110011": 9,
+    "01110100": 4,
+    "01110101": 13,
+    "01110110": 1,
+    "01110111": 4,
+    "01111000": 2,
+    "01111001": 13,
+    "01111010": 5,
+    "01111011": 25,
+    "01111100": 2,
+    "01111101": 3,
+    "01111111": 1,
+    "10000000": 3,
+    "10000010": 1,
+    "10000101": 2,
+    "10000110": 1,
+    "10000111": 2,
+    "10001001": 1,
+    "10001011": 7,
+    "10001100": 1,
+    "10001101": 1,
+    "10001110": 1,
+    "10001111": 2,
+    "10010001": 4,
+    "10010010": 1,
+    "10010011": 4,
+    "10010100": 9,
+    "10010101": 9,
+    "10010111": 8,
+    "10011000": 2,
+    "10011001": 3,
+    "10011010": 3,
+    "10011011": 10,
+    "10011100": 3,
+    "10011101": 5,
+    "10100000": 1,
+    "10100001": 9,
+    "10100010": 8,
+    "10100011": 5,
+    "10100100": 1,
+    "10100101": 15,
+    "10100110": 1,
+    "10100111": 7,
+    "10101001": 3,
+    "10101010": 11,
+    "10101011": 10,
+    "10101100": 15,
+    "10101101": 12,
+    "10101110": 7,
+    "10101111": 4,
+    "10110000": 5,
+    "10110001": 6,
+    "10110010": 3,
+    "10110100": 6,
+    "10110101": 14,
+    "10110110": 11,
+    "10110111": 1,
+    "10111000": 4,
+    "10111010": 10,
+    "10111100": 8,
+    "10111101": 4,
+    "10111110": 2,
+    "11000000": 1,
+    "11000001": 1,
+    "11000010": 4,
+    "11000011": 2,
+    "11000100": 5,
+    "11000101": 2,
+    "11000111": 1,
+    "11001000": 1,
+    "11001001": 3,
+    "11001010": 4,
+    "11001011": 7,
+    "11001101": 1,
+    "11001110": 1,
+    "11001111": 5,
+    "11010000": 1,
+    "11010001": 1,
+    "11010010": 1,
+    "11010011": 7,
+    "11010100": 6,
+    "11010101": 12,
+    "11010110": 3,
+    "11010111": 1,
+    "11011000": 5,
+    "11011001": 7,
+    "11011010": 9,
+    "11011011": 12,
+    "11011101": 3,
+    "11011110": 2,
+    "11100000": 4,
+    "11100001": 1,
+    "11100010": 18,
+    "11100011": 3,
+    "11100101": 10,
+    "11100110": 3,
+    "11100111": 6,
+    "11101000": 2,
+    "11101001": 2,
+    "11101010": 18,
+    "11101011": 5,
+    "11101100": 3,
+    "11101101": 3,
+    "11110000": 6,
+    "11110010": 3,
+    "11110100": 8,
+    "11110101": 2,
+    "11110110": 6,
+    "11111000": 7,
+    "11111001": 1,
+    "11111010": 9,
+    "11111011": 3,
+    "11111100": 3,
+    "11111110": 2
+  },
+  "recommended_result": {
+    "algorithm": "qaoa_best_feasible_sample",
+    "current_capacity_cv": 0.022336370218046533,
+    "current_capacity_spread_ah": 0.09400000000000008,
+    "feasible": true,
+    "metadata": {
+      "backend": "basic_simulator",
+      "objective_breakdown": {
+        "capacity_mismatch": 1.0318958172745416,
+        "cardinality_penalty": 0.0,
+        "future_mismatch": 0.06626947307711575,
+        "health_reward": -0.27158333333333334,
+        "resistance_mismatch": 0.0,
+        "temperature_mismatch": 0.0,
+        "total": 0.7492346364406454,
+        "uncertainty_penalty": -0.07734732057767875
+      },
+      "objective_mode": "trajectory_aware",
+      "pool_id": "synthetic-ui-cycle-76-h200",
+      "qaoa_bitstring": "10101010",
+      "qaoa_expected_energy": 17.76618920596663,
+      "qaoa_sample_count": 11,
+      "qaoa_sample_probability": 0.0107421875,
+      "recommended_sample_rule": "minimum_objective_among_feasible_measured_states",
+      "source_dataset": [
+        "synthetic_fixture"
+      ]
+    },
+    "objective_value": 0.7492346364406454,
+    "observed_pack_divergence": null,
+    "observed_usable_capacity_ah": null,
+    "predicted_pack_divergence": 0.020827490759672787,
+    "resistance_spread_ohm": null,
+    "runtime_ms": 2324.964302002627,
+    "selected_cell_ids": [
+      "SYN-02",
+      "SYN-04",
+      "SYN-06",
+      "SYN-08"
+    ],
+    "selected_indices": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "usable_pack_capacity_ah": 1.587
+  },
+  "reps": 1,
+  "shots_observed": 1024,
+  "shots_requested": 1024,
+  "single_backend_job": true,
+  "status_message": "QAOA produced at least one feasible K-cell sample.",
+  "timings_ms": {
+    "ansatz_build_ms": 3.040787996724248,
+    "backend_sampling_ms": 13.822483997500967,
+    "parameter_optimization_ms": 1412.002005999966,
+    "qubo_mapping_operator_ms": 816.6006519968505,
+    "result_diagnostics_ms": 8.506836005835794,
+    "total_ms": 2325.2629290000186,
+    "transpilation_ms": 71.22410900046816
+  }
+}

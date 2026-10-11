@@ -1,1 +1,1 @@
-"""Prepare reference-capacity histories from raw battery measurements."""
+"""Canonical data models, adapters, and trial loading."""

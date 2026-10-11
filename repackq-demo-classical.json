@@ -1,0 +1,3626 @@
+{
+  "data_classification": "synthetic-fixture",
+  "future_values_used": false,
+  "generated_by": "src/scripts/export_ui_demo.py",
+  "results": {
+    "h100-k3-current_only": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "current_only",
+      "pool_id": "synthetic-ui-cycle-76-h100",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.009299728381434213,
+          "current_capacity_spread_ah": 0.03600000000000003,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.10437745953182756,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.20745833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.1030808738015058,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": -0.1030808738015058,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.028792880960666508,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 1.648492005188018,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.009299728381434213,
+          "current_capacity_spread_ah": 0.03600000000000003,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": -0.10308087380150255,
+            "objective_breakdown": {
+              "capacity_mismatch": 0.10437745953182756,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.20745833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.1030808738015058,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 5.496174286989355,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                6
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": -0.1030808738015058,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.028792880960666508,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 4.223326002829708,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.009299728381434213,
+          "current_capacity_spread_ah": 0.03600000000000003,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.10437745953182756,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.20745833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.1030808738015058,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": -0.1030808738015058,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.028792880960666508,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 55.62400499911746,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.012481316952214936,
+          "current_capacity_spread_ah": 0.050999999999999934,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2051523388372761,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.21670833333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.011555994496057237,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": -0.011555994496057237,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.02289131340749644,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.015249002899508923,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.704
+        }
+      }
+    },
+    "h100-k3-trajectory_aware": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "trajectory_aware",
+      "pool_id": "synthetic-ui-cycle-76-h100",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.015033830029107182,
+          "current_capacity_spread_ah": 0.05800000000000005,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2574384356363359,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.035757015711158725,
+              "health_reward": -0.20154166666666667,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.0012150947485394248,
+              "uncertainty_penalty": -0.09043868993228853
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 0.0012150947485394248,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.012386767318315074,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 1.5638260010746308,
+          "selected_cell_ids": [
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.015033830029107182,
+          "current_capacity_spread_ah": 0.05800000000000005,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": 0.001215094748545198,
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2574384356363359,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.035757015711158725,
+              "health_reward": -0.20154166666666667,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.0012150947485394248,
+              "uncertainty_penalty": -0.09043868993228853
+            },
+            "objective_mode": "trajectory_aware",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 9.241335883154486,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                3,
+                5,
+                7
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 0.0012150947485394248,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.012386767318315074,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.515331001835875,
+          "selected_cell_ids": [
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.015033830029107182,
+          "current_capacity_spread_ah": 0.05800000000000005,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2574384356363359,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.035757015711158725,
+              "health_reward": -0.20154166666666667,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.0012150947485394248,
+              "uncertainty_penalty": -0.09043868993228853
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 0.0012150947485394248,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.012386767318315074,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 55.48561199975666,
+          "selected_cell_ids": [
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.012481316952214936,
+          "current_capacity_spread_ah": 0.050999999999999934,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2051523388372761,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.16131729649705456,
+              "health_reward": -0.21670833333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.10135485367893998,
+              "uncertainty_penalty": -0.04840644832205733
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 0.10135485367893998,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.02289131340749644,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.012764998245984316,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.704
+        }
+      }
+    },
+    "h100-k4-current_only": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "current_only",
+      "pool_id": "synthetic-ui-cycle-76-h100",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.014000921289333,
+          "current_capacity_spread_ah": 0.05899999999999994,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.42622418759381864,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.27845833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.14776585426048527,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 0.14776585426048527,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.04358387706965223,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 2.2271619964158162,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.014000921289333,
+          "current_capacity_spread_ah": 0.05899999999999994,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 70,
+            "feasible_qubo_optimum_energy": 0.14776585426049849,
+            "objective_breakdown": {
+              "capacity_mismatch": 0.42622418759381864,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.27845833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.14776585426048527,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 5.496174286989355,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                4,
+                6
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 0.14776585426048527,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.04358387706965223,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.5919359943363816,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.014000921289333,
+          "current_capacity_spread_ah": 0.05899999999999994,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.42622418759381864,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.27845833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.14776585426048527,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 0.14776585426048527,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.04358387706965223,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 65.49646500207018,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.017156026902813624,
+          "current_capacity_spread_ah": 0.07399999999999984,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.6786482210231668,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.28675,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.3918982210231668,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 0.3918982210231668,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.04705809924733294,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.01010900450637564,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.681
+        }
+      }
+    },
+    "h100-k4-trajectory_aware": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "trajectory_aware",
+      "pool_id": "synthetic-ui-cycle-76-h100",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.01651552517505249,
+          "current_capacity_spread_ah": 0.07600000000000007,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.5756338999553776,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.571685715467383,
+              "health_reward": -0.2743333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.7892647547999457,
+              "uncertainty_penalty": -0.08372152728948168
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 0.7892647547999457,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.035952031668844885,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 1.9803629984380677,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.01651552517505249,
+          "current_capacity_spread_ah": 0.07600000000000007,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 70,
+            "feasible_qubo_optimum_energy": 0.7892647547999729,
+            "objective_breakdown": {
+              "capacity_mismatch": 0.5756338999553776,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.571685715467383,
+              "health_reward": -0.2743333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.7892647547999457,
+              "uncertainty_penalty": -0.08372152728948168
+            },
+            "objective_mode": "trajectory_aware",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 9.241335883154486,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                5,
+                6
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 0.7892647547999457,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.035952031668844885,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 6.104740001319442,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.01651552517505249,
+          "current_capacity_spread_ah": 0.07600000000000007,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.5756338999553776,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.571685715467383,
+              "health_reward": -0.2743333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.7892647547999457,
+              "uncertainty_penalty": -0.08372152728948168
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 0.7892647547999457,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.035952031668844885,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 67.52441899880068,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.017156026902813624,
+          "current_capacity_spread_ah": 0.07399999999999984,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.6786482210231668,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.154661993150261,
+              "health_reward": -0.28675,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.5112451352059804,
+              "uncertainty_penalty": -0.03531507896744756
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 1.5112451352059804,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.04705809924733294,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.00990799890132621,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.681
+        }
+      }
+    },
+    "h100-k5-current_only": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "current_only",
+      "pool_id": "synthetic-ui-cycle-76-h100",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.02027457896843144,
+          "current_capacity_spread_ah": 0.09899999999999998,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3746277739462118,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.3453333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.0292944406128786,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 1.0292944406128786,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.050658201679240296,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 2.922573003161233,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.02027457896843144,
+          "current_capacity_spread_ah": 0.09899999999999998,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": 1.0292944406128441,
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3746277739462118,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.3453333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.0292944406128786,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 5.496174286989355,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                4,
+                5,
+                6
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 1.0292944406128786,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.050658201679240296,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 5.425980998552404,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.02027457896843144,
+          "current_capacity_spread_ah": 0.09899999999999998,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3746277739462118,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.3453333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.0292944406128786,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 1.0292944406128786,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.050658201679240296,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 76.61761799681699,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.02212209442120584,
+          "current_capacity_spread_ah": 0.10199999999999987,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.7355673658160626,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.35562499999999997,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.3799423658160626,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 1.3799423658160626,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.04393234368293289,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.009948998922482133,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.653
+        }
+      }
+    },
+    "h100-k5-trajectory_aware": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "trajectory_aware",
+      "pool_id": "synthetic-ui-cycle-76-h100",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.020734616164041018,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3974116597022292,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.8612160202023135,
+              "health_reward": -0.34045833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.8408220259935197,
+              "uncertainty_penalty": -0.0773473205776895
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 1.8408220259935197,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.03556027890811584,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.263399994466454,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.020734616164041018,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": 1.8408220259935035,
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3974116597022292,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.8612160202023135,
+              "health_reward": -0.34045833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.8408220259935197,
+              "uncertainty_penalty": -0.0773473205776895
+            },
+            "objective_mode": "trajectory_aware",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 9.241335883154486,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                5,
+                6,
+                7
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 1.8408220259935197,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.03556027890811584,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.675954998470843,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.020734616164041018,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3974116597022292,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.8612160202023135,
+              "health_reward": -0.34045833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.8408220259935197,
+              "uncertainty_penalty": -0.0773473205776895
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 1.8408220259935197,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.03556027890811584,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 86.45475999946939,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.02212209442120584,
+          "current_capacity_spread_ah": 0.10199999999999987,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.7355673658160626,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.5541564004808537,
+              "health_reward": -0.35562499999999997,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 2.8987836873294577,
+              "uncertainty_penalty": -0.03531507896745831
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h100",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 2.8987836873294577,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.04393234368293289,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.009498005965724587,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.653
+        }
+      }
+    },
+    "h150-k3-current_only": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "current_only",
+      "pool_id": "synthetic-ui-cycle-76-h150",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.009299728381434213,
+          "current_capacity_spread_ah": 0.03600000000000003,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.10437745953182756,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.20745833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.1030808738015058,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": -0.1030808738015058,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.04737749224263396,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 2.8818759965361096,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.009299728381434213,
+          "current_capacity_spread_ah": 0.03600000000000003,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": -0.10308087380150255,
+            "objective_breakdown": {
+              "capacity_mismatch": 0.10437745953182756,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.20745833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.1030808738015058,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 5.496174286989355,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                6
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": -0.1030808738015058,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.04737749224263396,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 4.058413993334398,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.009299728381434213,
+          "current_capacity_spread_ah": 0.03600000000000003,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.10437745953182756,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.20745833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.1030808738015058,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": -0.1030808738015058,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.04737749224263396,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 73.85934399644611,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.012481316952214936,
+          "current_capacity_spread_ah": 0.050999999999999934,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2051523388372761,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.21670833333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.011555994496057237,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": -0.011555994496057237,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.03295996012225997,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.014737997844349593,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.704
+        }
+      }
+    },
+    "h150-k3-trajectory_aware": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "trajectory_aware",
+      "pool_id": "synthetic-ui-cycle-76-h150",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.015033830029107182,
+          "current_capacity_spread_ah": 0.05800000000000005,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2574384356363359,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.02475694744597339,
+              "health_reward": -0.20154166666666667,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.009784973516645923,
+              "uncertainty_penalty": -0.09043868993228854
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": -0.009784973516645923,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.013369282459221714,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 2.1395160001702607,
+          "selected_cell_ids": [
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.015033830029107182,
+          "current_capacity_spread_ah": 0.05800000000000005,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": -0.009784973516616446,
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2574384356363359,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.02475694744597339,
+              "health_reward": -0.20154166666666667,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.009784973516645923,
+              "uncertainty_penalty": -0.09043868993228854
+            },
+            "objective_mode": "trajectory_aware",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 9.226973473319214,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                3,
+                5,
+                7
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": -0.009784973516645923,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.013369282459221714,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.061297000385821,
+          "selected_cell_ids": [
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.015033830029107182,
+          "current_capacity_spread_ah": 0.05800000000000005,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2574384356363359,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.02475694744597339,
+              "health_reward": -0.20154166666666667,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.009784973516645923,
+              "uncertainty_penalty": -0.09043868993228854
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": -0.009784973516645923,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.013369282459221714,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 54.460398001538124,
+          "selected_cell_ids": [
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.012481316952214936,
+          "current_capacity_spread_ah": 0.050999999999999934,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2051523388372761,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.21582149336718473,
+              "health_reward": -0.21670833333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.15585905054907018,
+              "uncertainty_penalty": -0.04840644832205734
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 0.15585905054907018,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.03295996012225997,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.009738003427628428,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.704
+        }
+      }
+    },
+    "h150-k4-current_only": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "current_only",
+      "pool_id": "synthetic-ui-cycle-76-h150",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.014000921289333,
+          "current_capacity_spread_ah": 0.05899999999999994,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.42622418759381864,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.27845833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.14776585426048527,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 0.14776585426048527,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06494433820694955,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 2.046673995209858,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.014000921289333,
+          "current_capacity_spread_ah": 0.05899999999999994,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 70,
+            "feasible_qubo_optimum_energy": 0.14776585426049849,
+            "objective_breakdown": {
+              "capacity_mismatch": 0.42622418759381864,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.27845833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.14776585426048527,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 5.496174286989355,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                4,
+                6
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 0.14776585426048527,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06494433820694955,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 6.217313995875884,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.014000921289333,
+          "current_capacity_spread_ah": 0.05899999999999994,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.42622418759381864,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.27845833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.14776585426048527,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 0.14776585426048527,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06494433820694955,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 78.72140599647537,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.017156026902813624,
+          "current_capacity_spread_ah": 0.07399999999999984,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.6786482210231668,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.28675,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.3918982210231668,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 0.3918982210231668,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06686671535172133,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.011361000360921025,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.681
+        }
+      }
+    },
+    "h150-k4-trajectory_aware": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "trajectory_aware",
+      "pool_id": "synthetic-ui-cycle-76-h150",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.022336370218046533,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.0318958172745416,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.09708677099409266,
+              "health_reward": -0.27158333333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.7800519343576221,
+              "uncertainty_penalty": -0.07734732057767876
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 0.7800519343576221,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.019673188838478864,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 2.1707549967686646,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.022336370218046533,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 70,
+            "feasible_qubo_optimum_energy": 0.7800519343576582,
+            "objective_breakdown": {
+              "capacity_mismatch": 1.0318958172745416,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.09708677099409266,
+              "health_reward": -0.27158333333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.7800519343576221,
+              "uncertainty_penalty": -0.07734732057767876
+            },
+            "objective_mode": "trajectory_aware",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 9.226973473319214,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                5,
+                7
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 0.7800519343576221,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.019673188838478864,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 4.206803998386022,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.022336370218046533,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.0318958172745416,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.09708677099409266,
+              "health_reward": -0.27158333333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.7800519343576221,
+              "uncertainty_penalty": -0.07734732057767876
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 0.7800519343576221,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.019673188838478864,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 68.49240799783729,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.017156026902813624,
+          "current_capacity_spread_ah": 0.07399999999999984,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.6786482210231668,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.4751750873053762,
+              "health_reward": -0.28675,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.8317582293610957,
+              "uncertainty_penalty": -0.03531507896744756
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 1.8317582293610957,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06686671535172133,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.010119001672137529,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.681
+        }
+      }
+    },
+    "h150-k5-current_only": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "current_only",
+      "pool_id": "synthetic-ui-cycle-76-h150",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.02027457896843144,
+          "current_capacity_spread_ah": 0.09899999999999998,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3746277739462118,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.3453333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.0292944406128786,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 1.0292944406128786,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.07233449267249499,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.914257998985704,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.02027457896843144,
+          "current_capacity_spread_ah": 0.09899999999999998,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": 1.0292944406128441,
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3746277739462118,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.3453333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.0292944406128786,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 5.496174286989355,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                4,
+                5,
+                6
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 1.0292944406128786,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.07233449267249499,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.6438639945117757,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.02027457896843144,
+          "current_capacity_spread_ah": 0.09899999999999998,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3746277739462118,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.3453333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.0292944406128786,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 1.0292944406128786,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.07233449267249499,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 75.95508899976267,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.02212209442120584,
+          "current_capacity_spread_ah": 0.10199999999999987,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.7355673658160626,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.35562499999999997,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.3799423658160626,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 1.3799423658160626,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.060798224594497415,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.009297000360675156,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.653
+        }
+      }
+    },
+    "h150-k5-trajectory_aware": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "trajectory_aware",
+      "pool_id": "synthetic-ui-cycle-76-h150",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.020734616164041018,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3974116597022292,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.0297135267767958,
+              "health_reward": -0.34045833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 2.0093195325680027,
+              "uncertainty_penalty": -0.07734732057768952
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 2.0093195325680027,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.05005104306354052,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.262459998950362,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.020734616164041018,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": 2.0093195325679574,
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3974116597022292,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.0297135267767958,
+              "health_reward": -0.34045833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 2.0093195325680027,
+              "uncertainty_penalty": -0.07734732057768952
+            },
+            "objective_mode": "trajectory_aware",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 9.226973473319214,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                5,
+                6,
+                7
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 2.0093195325680027,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.05005104306354052,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 4.802276998816524,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.020734616164041018,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3974116597022292,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.0297135267767958,
+              "health_reward": -0.34045833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 2.0093195325680027,
+              "uncertainty_penalty": -0.07734732057768952
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 2.0093195325680027,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.05005104306354052,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 88.06367500073975,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.02212209442120584,
+          "current_capacity_spread_ah": 0.10199999999999987,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.7355673658160626,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.8880015962383185,
+              "health_reward": -0.35562499999999997,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 3.2326288830869228,
+              "uncertainty_penalty": -0.03531507896745831
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h150",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 3.2326288830869228,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.060798224594497415,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.012263000826351345,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.653
+        }
+      }
+    },
+    "h200-k3-current_only": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "current_only",
+      "pool_id": "synthetic-ui-cycle-76-h200",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.009299728381434213,
+          "current_capacity_spread_ah": 0.03600000000000003,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.10437745953182756,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.20745833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.1030808738015058,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": -0.1030808738015058,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06995693363014963,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 1.303657001699321,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.009299728381434213,
+          "current_capacity_spread_ah": 0.03600000000000003,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": -0.10308087380150255,
+            "objective_breakdown": {
+              "capacity_mismatch": 0.10437745953182756,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.20745833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.1030808738015058,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 5.496174286989355,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                6
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": -0.1030808738015058,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06995693363014963,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.3241670025745407,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.009299728381434213,
+          "current_capacity_spread_ah": 0.03600000000000003,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.10437745953182756,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.20745833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.1030808738015058,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": -0.1030808738015058,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06995693363014963,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 53.90638300013961,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.012481316952214936,
+          "current_capacity_spread_ah": 0.050999999999999934,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2051523388372761,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.21670833333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.011555994496057237,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": -0.011555994496057237,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.044951663670803776,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.016902005882002413,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.704
+        }
+      }
+    },
+    "h200-k3-trajectory_aware": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "trajectory_aware",
+      "pool_id": "synthetic-ui-cycle-76-h200",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.015033830029107182,
+          "current_capacity_spread_ah": 0.05800000000000005,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2574384356363359,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.024313442268327188,
+              "health_reward": -0.20154166666666667,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.010228478694292109,
+              "uncertainty_penalty": -0.09043868993228853
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": -0.010228478694292109,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.0169664400719495,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 1.4189869980327785,
+          "selected_cell_ids": [
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.015033830029107182,
+          "current_capacity_spread_ah": 0.05800000000000005,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": -0.010228478694287446,
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2574384356363359,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.024313442268327188,
+              "health_reward": -0.20154166666666667,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.010228478694292109,
+              "uncertainty_penalty": -0.09043868993228853
+            },
+            "objective_mode": "trajectory_aware",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 9.21676303335983,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                3,
+                5,
+                7
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": -0.010228478694292109,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.0169664400719495,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 6.092185998568311,
+          "selected_cell_ids": [
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.015033830029107182,
+          "current_capacity_spread_ah": 0.05800000000000005,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2574384356363359,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.024313442268327188,
+              "health_reward": -0.20154166666666667,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": -0.010228478694292109,
+              "uncertainty_penalty": -0.09043868993228853
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": -0.010228478694292109,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.0169664400719495,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 70.60670899954857,
+          "selected_cell_ids": [
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.012481316952214936,
+          "current_capacity_spread_ah": 0.050999999999999934,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.2051523388372761,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.26957374568621617,
+              "health_reward": -0.21670833333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.20961130286810165,
+              "uncertainty_penalty": -0.04840644832205733
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 0.20961130286810165,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.044951663670803776,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.01970700395759195,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.704
+        }
+      }
+    },
+    "h200-k4-current_only": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "current_only",
+      "pool_id": "synthetic-ui-cycle-76-h200",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.014000921289333,
+          "current_capacity_spread_ah": 0.05899999999999994,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.42622418759381864,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.27845833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.14776585426048527,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 0.14776585426048527,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.09032688695437403,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 1.9341549996170215,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.014000921289333,
+          "current_capacity_spread_ah": 0.05899999999999994,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 70,
+            "feasible_qubo_optimum_energy": 0.14776585426049849,
+            "objective_breakdown": {
+              "capacity_mismatch": 0.42622418759381864,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.27845833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.14776585426048527,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 5.496174286989355,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                4,
+                6
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 0.14776585426048527,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.09032688695437403,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 4.065710003487766,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.014000921289333,
+          "current_capacity_spread_ah": 0.05899999999999994,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.42622418759381864,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.27845833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.14776585426048527,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 0.14776585426048527,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.09032688695437403,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 70.25066300411709,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.645
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.017156026902813624,
+          "current_capacity_spread_ah": 0.07399999999999984,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.6786482210231668,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.28675,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.3918982210231668,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 0.3918982210231668,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.08982687816551514,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.015459001588169485,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.681
+        }
+      }
+    },
+    "h200-k4-trajectory_aware": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "trajectory_aware",
+      "pool_id": "synthetic-ui-cycle-76-h200",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.022336370218046533,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.0318958172745416,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.06626947307711575,
+              "health_reward": -0.27158333333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.7492346364406454,
+              "uncertainty_penalty": -0.07734732057767875
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 0.7492346364406454,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.020827490759672787,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 2.8620430020964704,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.022336370218046533,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 70,
+            "feasible_qubo_optimum_energy": 0.749234636440633,
+            "objective_breakdown": {
+              "capacity_mismatch": 1.0318958172745416,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.06626947307711575,
+              "health_reward": -0.27158333333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.7492346364406454,
+              "uncertainty_penalty": -0.07734732057767875
+            },
+            "objective_mode": "trajectory_aware",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 9.21676303335983,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                5,
+                7
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 0.7492346364406454,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.020827490759672787,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 5.880353994143661,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.022336370218046533,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.0318958172745416,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.06626947307711575,
+              "health_reward": -0.27158333333333334,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 0.7492346364406454,
+              "uncertainty_penalty": -0.07734732057767875
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 0.7492346364406454,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.020827490759672787,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 71.61088900465984,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.017156026902813624,
+          "current_capacity_spread_ah": 0.07399999999999984,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 0.6786482210231668,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.7483428364813147,
+              "health_reward": -0.28675,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 2.104925978537034,
+              "uncertainty_penalty": -0.03531507896744756
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 2.104925978537034,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.08982687816551514,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.008966999303083867,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "usable_pack_capacity_ah": 1.681
+        }
+      }
+    },
+    "h200-k5-current_only": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "current_only",
+      "pool_id": "synthetic-ui-cycle-76-h200",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.02027457896843144,
+          "current_capacity_spread_ah": 0.09899999999999998,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3746277739462118,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.3453333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.0292944406128786,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 1.0292944406128786,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.09846263035487822,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 2.825233998009935,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.02027457896843144,
+          "current_capacity_spread_ah": 0.09899999999999998,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": 1.0292944406128441,
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3746277739462118,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.3453333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.0292944406128786,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 5.496174286989355,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                4,
+                5,
+                6
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 1.0292944406128786,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.09846263035487822,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 4.44532600522507,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.02027457896843144,
+          "current_capacity_spread_ah": 0.09899999999999998,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3746277739462118,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.3453333333333333,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.0292944406128786,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 1.0292944406128786,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.09846263035487822,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 82.7298219955992,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-05",
+            "SYN-06",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.605
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.02212209442120584,
+          "current_capacity_spread_ah": 0.10199999999999987,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.7355673658160626,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 0.0,
+              "health_reward": -0.35562499999999997,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 1.3799423658160626,
+              "uncertainty_penalty": 0.0
+            },
+            "objective_mode": "current_only",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 1.3799423658160626,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.08086547665185378,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.009807998139876872,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.653
+        }
+      }
+    },
+    "h200-k5-trajectory_aware": {
+      "data_classification": "synthetic-fixture",
+      "exact_algorithm": "exact_enumeration",
+      "future_disclosed": false,
+      "objective_mode": "trajectory_aware",
+      "pool_id": "synthetic-ui-cycle-76-h200",
+      "results": {
+        "compatibility_greedy": {
+          "algorithm": "compatibility_greedy",
+          "current_capacity_cv": 0.020734616164041018,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3974116597022292,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.2083272466122028,
+              "health_reward": -0.34045833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 2.1879332524034094,
+              "uncertainty_penalty": -0.0773473205776895
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "starting_seeds_evaluated": 8
+          },
+          "objective_value": 2.1879332524034094,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06878632453734963,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.618345996073913,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "exact_enumeration": {
+          "algorithm": "exact_enumeration",
+          "current_capacity_cv": 0.020734616164041018,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "evaluated_subsets": 56,
+            "feasible_qubo_optimum_energy": 2.187933252403468,
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3974116597022292,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.2083272466122028,
+              "health_reward": -0.34045833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 2.1879332524034094,
+              "uncertainty_penalty": -0.0773473205776895
+            },
+            "objective_mode": "trajectory_aware",
+            "penalty_calibration_doublings": 0,
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "qubo_global_minimum_feasible": true,
+            "qubo_penalty": 9.21676303335983,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tied_optima": [
+              [
+                1,
+                3,
+                5,
+                6,
+                7
+              ]
+            ],
+            "tied_optima_count": 1,
+            "tied_optima_truncated": false
+          },
+          "objective_value": 2.1879332524034094,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06878632453734963,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 3.4474800049792975,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "simulated_annealing": {
+          "algorithm": "simulated_annealing",
+          "current_capacity_cv": 0.020734616164041018,
+          "current_capacity_spread_ah": 0.09400000000000008,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.3974116597022292,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 1.2083272466122028,
+              "health_reward": -0.34045833333333336,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 2.1879332524034094,
+              "uncertainty_penalty": -0.0773473205776895
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "schedule": "geometric",
+            "seed": 20261010,
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "steps": 3000
+          },
+          "objective_value": 2.1879332524034094,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.06878632453734963,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 75.0123670004541,
+          "selected_cell_ids": [
+            "SYN-02",
+            "SYN-04",
+            "SYN-06",
+            "SYN-07",
+            "SYN-08"
+          ],
+          "selected_indices": [
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "usable_pack_capacity_ah": 1.587
+        },
+        "soh_sort": {
+          "algorithm": "soh_sort",
+          "current_capacity_cv": 0.02212209442120584,
+          "current_capacity_spread_ah": 0.10199999999999987,
+          "feasible": true,
+          "metadata": {
+            "objective_breakdown": {
+              "capacity_mismatch": 1.7355673658160626,
+              "cardinality_penalty": 0.0,
+              "future_mismatch": 2.199607589528221,
+              "health_reward": -0.35562499999999997,
+              "resistance_mismatch": 0.0,
+              "temperature_mismatch": 0.0,
+              "total": 3.544234876376825,
+              "uncertainty_penalty": -0.035315078967458315
+            },
+            "objective_mode": "trajectory_aware",
+            "pool_id": "synthetic-ui-cycle-76-h200",
+            "source_dataset": [
+              "synthetic_fixture"
+            ],
+            "tie_breaks": [
+              "descending_soh",
+              "descending_capacity",
+              "cell_id"
+            ]
+          },
+          "objective_value": 3.544234876376825,
+          "observed_pack_divergence": null,
+          "observed_usable_capacity_ah": null,
+          "predicted_pack_divergence": 0.08086547665185378,
+          "resistance_spread_ohm": null,
+          "runtime_ms": 0.009498005965724587,
+          "selected_cell_ids": [
+            "SYN-01",
+            "SYN-02",
+            "SYN-03",
+            "SYN-05",
+            "SYN-07"
+          ],
+          "selected_indices": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "usable_pack_capacity_ah": 1.653
+        }
+      }
+    }
+  },
+  "schema_version": "1.0"
+}
