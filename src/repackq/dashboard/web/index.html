@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09151d">
+  <title>RePack-Q · Battery workbench</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#workspace">Skip to workbench</a>
+<svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 3v17h17M8 15l4-5 4 3 5-8"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8l10-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+</defs></svg>
+
+<aside class="sidebar">
+  <nav aria-label="Main navigation">
+    <a class="nav-item active" href="#workspace" aria-current="location" aria-label="Workbench"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><span>Workbench</span></a>
+    <a class="nav-item" href="#comparison" aria-label="Algorithms"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg><span>Algorithms</span></a>
+    <a class="nav-item" href="#benchmark" aria-label="Results"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg><span>Results</span></a>
+    <a class="nav-item" href="#methodology" aria-label="Methodology"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Methodology</span></a>
+  </nav>
+</aside>
+
+<main>
+  <header class="topbar">
+    <a class="brand" href="#workspace" aria-label="RePack-Q workbench">
+      <svg viewBox="0 0 40 40" class="brand-mark" aria-hidden="true"><rect x="5" y="10" width="27" height="22" rx="5"/><path d="M32 17h4v8h-4M12 16v10m6-10v10m6-10v10"/></svg>
+      <span>RePack<span class="brand-q">-Q</span><small>SECOND-LIFE BATTERIES</small></span>
+    </a>
+    <div class="top-actions"><button class="button button-quiet" id="download" disabled><svg class="icon"><use href="#i-download"/></svg>Export run</button></div>
+  </header>
+
+  <!-- project introduction -->
+  <section id="workspace" class="intro" aria-labelledby="page-title" tabindex="-1">
+    <div><h1 id="page-title">Match batteries by<br>how they’ll <em>age.</em></h1><p>Use their history to predict the next chapter.<br>Then find the cells that belong together.</p></div>
+    <div class="intro-note"><div class="mini-battery" aria-hidden="true"><span></span><span></span><span></span><span></span></div><span>Predict. Match. Validate.</span><p>One shared problem.<br>Four classical approaches.<br>Two quantum approaches.</p></div>
+  </section>
+
+  <div class="error-banner" role="alert" id="error" hidden></div>
+  <!-- settings used to generate the candidate pool and score groups -->
+  <section class="panel controls-panel" aria-label="Experiment settings">
+    <div class="panel-top"><div class="section-label"><span class="number-label">01</span> SET UP THE EXPERIMENT</div><span class="live-label" id="compute-status">Ready</span></div>
+    <div class="dataset-control"><label>Battery source<select id="partition"><option value="all" selected>Full dataset</option><option value="test">Held-out test batteries</option></select></label><p class="helper" id="dataset-caption">Sample a shared candidate pool from the full dataset. All algorithms receive the same candidates.</p></div>
+    <div class="control-grid">
+      <label>Forecast horizon<select id="horizon"><option value="50">50 cycles ahead</option><option value="100">100 cycles ahead</option><option value="200" selected>200 cycles ahead</option></select></label>
+      <label>Known second-life history<select id="cutoff"><option value="0">First-life history only</option><option value="20">Through cycle 20</option><option value="50">Through cycle 50</option><option value="100">Through cycle 100</option></select></label>
+      <label>Sampled candidate cells<select id="candidates"><option>6</option><option selected>8</option><option>10</option><option>12</option></select></label>
+      <label>Group size<select id="pack-size"><option>2</option><option>3</option><option selected>4</option><option>5</option></select></label>
+      <label>Pool seed<input id="seed" type="number" min="0" max="2147483647" value="11"></label>
+      <button class="button button-primary" id="run"><svg class="icon"><use href="#i-play"/></svg><span>Run comparison</span></button>
+    </div>
+    <div class="control-bottom"><div class="segmented" role="group" aria-label="Matching objective"><button type="button" data-mode="current_only" aria-pressed="false">Match for today</button><button type="button" data-mode="trajectory_aware" class="selected" aria-pressed="true">Match for the future</button></div><p id="objective-caption">Consider current condition and predicted future capacity.</p></div>
+    <label class="quantum-toggle"><input type="checkbox" id="include-quantum"> Include both quantum algorithms <span id="quantum-capability" class="helper">Checking Qiskit…</span></label>
+  </section>
+
+  <!-- cell cards are filled in after the Python comparison returns -->
+  <section class="inventory-section" aria-labelledby="inventory-title">
+    <div class="section-heading"><div><div class="eyebrow muted">THE CANDIDATE POOL</div><h2 id="inventory-title">Different histories. New possibilities.</h2></div><span class="subtle-count" id="pool-count">— cells</span></div>
+    <p class="helper pool-summary" id="pool-summary" aria-live="polite">Preparing the candidate pool…</p>
+    <details class="pool-exclusions" id="pool-exclusions" hidden><summary id="exclusions-title">Excluded batteries</summary><p class="helper" id="exclusions-reasons"></p></details>
+    <div id="inventory" class="inventory-grid"><div class="loading-card">Loading the battery workbench…</div></div>
+    <p class="helper" id="inventory-help">Click a cell to build your own group. Future measurements stay hidden until you reveal them.</p>
+  </section>
+
+  <!-- selected group, forecast endpoints, and future reveal -->
+  <section class="outlook-grid" aria-label="Selected group capacity outlook">
+    <div class="panel chart-panel">
+      <div class="panel-top"><div><div class="section-label">CAPACITY OUTLOOK</div><h2 id="selection-title">Your selected group</h2></div><span class="pill neutral" id="selection-method">Waiting for a run</span></div>
+      <div class="pack-slots" id="pack-slots"></div>
+      <div class="selection-metrics"><div><span>Current group capacity</span><strong id="pack-capacity">—</strong><small>amp-hours · minimum cell</small></div><div><span>Predicted future spread</span><strong id="pack-spread">—</strong><small>amp-hours · lower is closer</small></div><div><span>Distance from best score</span><strong id="pack-gap">—</strong><small>zero means an optimal score</small></div></div>
+      <div id="capacity-chart" class="capacity-chart"></div>
+      <div class="chart-legend"><span><i class="legend-dash"></i>Predicted endpoint</span><span><i class="legend-circle"></i>Recorded endpoint after reveal</span></div>
+      <p class="helper chart-note">Lines connect current capacity to a forecast; they are guides, not measured degradation curves.</p>
+      <div class="reveal-bar"><div><strong id="reveal-title">The future is still hidden.</strong><p id="reveal-caption">Compare your choice with measurements excluded from selection.</p></div><button class="button button-outline" id="reveal" disabled><svg class="icon"><use href="#i-eye"/></svg>Reveal actual future</button></div>
+      <div id="observed-result" class="observed-result" hidden></div>
+    </div>
+
+  </section>
+
+  <!-- methods share the same cells and objective -->
+  <section id="comparison" class="panel comparison-panel" aria-labelledby="comparison-title">
+    <div class="panel-top"><div><div class="eyebrow muted">02 / COMPARE APPROACHES</div><h2 id="comparison-title">One problem. Different paths.</h2><p class="helper">Select a method to inspect its group. Every method uses the same candidates and score.</p></div><span class="pill neutral">Computed locally</span></div>
+    <div class="table-scroll"><table><thead><tr><th scope="col">Algorithm</th><th scope="col">Selected cells</th><th scope="col">Group score <span>↓</span></th><th scope="col">Gap from best <span>↓</span></th><th scope="col">Runtime</th></tr></thead><tbody id="algorithm-rows"></tbody></table></div>
+    <p class="table-foot">Runtime is measured in milliseconds (ms). A lower score is better within this objective. Exact search checks every possible group; it is the reference, not a prediction of the best physical pack.</p>
+  </section>
+
+  <!-- recorded benchmark and model evaluation, separate from the current run -->
+  <section id="benchmark" class="results-section" aria-labelledby="benchmark-title">
+    <div class="section-heading"><div><div class="eyebrow muted">03 / THE EVIDENCE</div><h2 id="benchmark-title">Look beyond a single match.</h2></div><span class="pill neutral" id="benchmark-label">Saved experiment</span></div>
+    <div class="evidence-grid">
+      <div class="panel benchmark-panel"><div class="panel-top"><div><h3>How closely did the groups age?</h3><p class="helper" id="benchmark-description">Actual future imbalance across the saved benchmark.</p></div></div><div id="benchmark-bars"></div><div class="benchmark-takeaway" id="benchmark-takeaway"></div><p class="helper">Imbalance is the standard deviation of cell capacities divided by their mean. Lower means more consistent cells.</p></div>
+      <div class="panel prediction-panel"><div class="panel-top"><div><h3>How close were the forecasts?</h3><p class="helper" id="evaluation-label">Recorded baseline model evaluation</p></div></div><div class="accuracy-grid"><div><strong id="accuracy-5">—</strong><span>within 5% of actual capacity</span></div><div><strong id="accuracy-10">—</strong><span>within 10% of actual capacity</span></div></div><div class="evaluation-details"><div><span>Average absolute error</span><strong id="average-error">—</strong></div><div><span>Test forecasts</span><strong id="forecast-count">—</strong></div><div><span>Test batteries</span><strong id="test-count">—</strong></div></div><p class="helper" id="evaluation-note">These are saved test results, not a guarantee for this group. Test batteries were excluded from fitting, but inspected in earlier experiments.</p></div>
+    </div>
+  </section>
+
+  <!-- definitions and limits behind the displayed results -->
+  <section id="methodology" class="methodology" aria-labelledby="method-title"><div class="section-heading"><div><div class="eyebrow muted">UNDER THE HOOD</div><h2 id="method-title" class="sr-only">Methodology</h2></div></div><div class="method-grid"><details><summary>What is being predicted?</summary><p>Future reference-discharge capacity, measured in amp-hours, after a chosen number of charge/discharge cycles. First-life history is used, with earlier second-life observations only when available. Capacity loss is current capacity minus predicted future capacity. Calendar lifetime is not predicted.</p></details><details><summary>How are groups scored?</summary><p>We penalize differences in current capacity, resistance, and optionally predicted future capacity. Better current health is rewarded. Features are scaled within the candidate pool. Exactly the requested number of cells must be selected. The weights are assumptions, not universal physical constants.</p><div id="weight-details"></div></details><details><summary>What do these results prove?</summary><p>They compare selection methods on small, retrospective battery experiments. A good score can still produce a poor physical outcome if predictions are wrong. Saved pools overlap, and the test batteries have been inspected previously. No quantum speedup, deployment safety, or real pack lifetime claim is made.</p></details><details><summary>Where does the data come from?</summary><p>The local dataset contains 86 reused lithium-ion cells with first-life and second-life histories. By default, candidates are sampled from all 86 cells, including cells used for model training or tuning. This is exploratory; the battery-source control can restrict sampling to held-out test cells. Every algorithm receives the same sampled candidates, not the entire dataset at once. Capacity labels use comparable reference discharge tests. The repository includes trained weights and compact real histories. Missing assets fall back to explicitly labeled invented sample data. Battery data is attributed to Wang, Gao, and Tian under Creative Commons Attribution 4.0. This effort is supported by Qollab &amp; IonQ.</p></details></div></section>
+  <div class="sr-only" id="status-message" role="status" aria-live="polite"></div>
+</main>
+</body>
+</html>

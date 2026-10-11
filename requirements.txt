@@ -1,3 +1,9 @@
+HEAD
 qiskit
 numpy
 scipy
+# Optional offline data preparation and training dependencies.
+# Classical runs use the standard library. Install .[quantum] for Qiskit selection.
+numpy>=1.26,<3
+pandas>=2.2,<3
+origin/repackq-quantum-integration

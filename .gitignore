@@ -1,1 +1,25 @@
+<<<<<<< HEAD
 __pycache__/
+=======
+Primary_use_phase/
+Second_life_phase/
+data/raw/
+data/processed/*
+!data/processed/cell_histories.json
+build/
+/models/**
+!/models/README.md
+!/models/capacity_model.json
+!/models/evaluation.json
+/results/*.json
+!/results/classical-first-run.json
+!/results/classical-benchmark-20-seeds.json
+!/results/quantum-first-run.json
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+.pytest_cache/
+*.class
+*.egg-info/
+>>>>>>> origin/repackq-quantum-integration

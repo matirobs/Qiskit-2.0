@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "source": {
+    "dataset_doi": "10.5281/zenodo.14859405",
+    "record_api": "https://zenodo.org/api/records/14859405",
+    "license_id": "cc-by-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "verified_date": "2026-10-11",
+    "record_revision": 12
+  },
+  "assets": [
+    {
+      "path": "models/capacity_model.json",
+      "bytes": 12124,
+      "sha256": "1420ba5ca5346fdcdfc44843a3852c44372d5cc577ac4995aa2755dba192b140"
+    },
+    {
+      "path": "models/evaluation.json",
+      "bytes": 107130,
+      "sha256": "58629d513466a315774c130ac0243b037fc704c0fc366f78a23bbebf63436af2"
+    },
+    {
+      "path": "data/processed/cell_histories.json",
+      "bytes": 3177248,
+      "sha256": "eb990db4a75fe025cf5290179d2a63e7accab296f053dd20450b056c0376495c"
+    },
+    {
+      "path": "results/classical-first-run.json",
+      "bytes": 35639,
+      "sha256": "f4540379a8f0fd71f6df143b09a2a4b95e2c1f2b430e5a931d8a5451af37b0a9"
+    },
+    {
+      "path": "results/classical-benchmark-20-seeds.json",
+      "bytes": 482067,
+      "sha256": "beaf4e41bd2bee47b3ad9ad12642f429d99a887911b045b6fd2d34050fe250cf"
+    },
+    {
+      "path": "results/quantum-first-run.json",
+      "bytes": 165128,
+      "sha256": "9b9a631be3e6936c4f22806b9e181f6a0d8eeda272b6f64cfcb55910b38f2215"
+    }
+  ]
+}

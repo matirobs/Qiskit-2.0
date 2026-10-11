@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repackq"
+version = "0.1.0"
+description = "History-based second-life battery prediction and quantum selection"
+requires-python = ">=3.10"
+dependencies = []
+
+# Install numerical packages only for offline preparation and training.
+[project.optional-dependencies]
+training = ["numpy>=1.26,<3", "pandas>=2.2,<3"]
+quantum = ["qiskit>=2,<3", "scipy>=1.13,<2"]
+
+[project.scripts]
+repackq = "repackq.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Include the browser assets when building an installable package.
+[tool.setuptools.package-data]
+"repackq.dashboard" = ["web/*"]
