@@ -212,3 +212,39 @@ print("\n[6e] best angles: gammas", np.round(gammas, 3), "betas", np.round(betas
 print("average pack score, random guessing:", round(random_average, 4))
 print("average pack score, quantum circuit:", round(result.fun, 4))
 print("chance of best pack: random", round(1 / 70, 3), "| quantum", round(prob_best(gammas, betas), 3))
+
+
+
+
+final = qaoa_circuit(gammas, betas)
+final.measure_all()
+shots = 1024
+final_counts = StatevectorSampler(seed=7).run([final], shots=shots).result()[0].data.meas.get_counts()
+
+# sort measured packs from most to least common
+top = sorted(final_counts.items(), key=lambda item: item[1], reverse=True)
+
+print("\n[6f] top 5 packs measured (out of", shots, "shots):")
+for key, count in top[:5]:
+    cells = decode(key)
+    tag = "<- classical best" if tuple(cells) == best_pack else ""
+    print(" ", [names[i] for i in cells], round(count / shots * 100, 1), "%  score", round(pack_score(cells), 4), tag)
+
+# the quantum answer = the best-scoring pack among everything the circuit measured
+quantum_pack = min([decode(key) for key in final_counts], key=pack_score)
+
+print("quantum answer:", [names[i] for i in quantum_pack])
+print("matches the classical best pack?", tuple(quantum_pack) == best_pack)
+print("every shot had exactly 4 cells?", all(key.count("1") == K for key in final_counts))
+
+
+
+print("\n===== BEST PACK OF 4 CELLS =====")
+print("cell   now (Ah)   in 200 cycles (Ah)")
+for i in quantum_pack:
+    print(names[i], "   ", round(capacity_now[i], 2), "     ", round(capacity_future[i], 2))
+
+# in a series pack the weakest cell limits the whole pack
+print("usable pack capacity now:      ", round(min(capacity_now[list(quantum_pack)]), 2), "Ah")
+print("usable pack capacity in 200 cycles:", round(min(capacity_future[list(quantum_pack)]), 2), "Ah")
+print("spread after 200 cycles:       ", round(future_spread(quantum_pack), 3), "Ah")
