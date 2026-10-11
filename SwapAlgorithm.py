@@ -7,6 +7,10 @@ from itertools import combinations   # makes every possible group of cells
 # get the 8 candidate cells from candidates.py
 from candidates import names, capacity_now, capacity_future
 
+from qiskit import QuantumCircuit                      # builds quantum circuits
+from qiskit.circuit.library import StatePreparation   # sets qubits to any starting state we want
+from qiskit.primitives import StatevectorSampler       # simulates measuring the circuit
+
 n = len(names)   # 8 cells to choose from
 K = 4            # cells in one pack
 
@@ -69,3 +73,32 @@ def future_spread(pack):
 print("\nafter 200 cycles, spread between strongest and weakest cell:")
 print("  our pack (now + future):", round(future_spread(best_pack), 3), "Ah")
 print("  today-only pack:        ", round(future_spread(today_pack), 3), "Ah")
+
+
+# a list of 256 numbers (one for every possible 8-bit pattern)
+# patterns with exactly four 1s get an equal share, everything else gets 0
+amps = np.zeros(2 ** n)
+for b in range(2 ** n):
+    if bin(b).count("1") == K:      # does this pattern pick exactly 4 cells?
+        amps[b] = 1
+amps = amps / np.sqrt(amps.sum())   # quantum rule: squares must add up to 1
+
+start = QuantumCircuit(n)
+start.append(StatePreparation(amps), range(n))
+
+
+# turn a measured bit pattern back into cell numbers
+# Qiskit puts qubit 0 on the RIGHT, so we read the string backwards
+def decode(key):
+    return [i for i, bit in enumerate(reversed(key)) if bit == "1"]
+
+
+# test: measure the starting state 1000 times
+test = start.copy()
+test.measure_all()
+counts = StatevectorSampler(seed=1).run([test], shots=1000).result()[0].data.meas.get_counts()
+
+print("\n[6a] different packs measured:", len(counts))
+print("every measurement picks exactly 4 cells?", all(key.count("1") == K for key in counts))
+example = list(counts)[0]
+print("example:", example, "->", [names[i] for i in decode(example)])
