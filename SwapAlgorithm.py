@@ -12,6 +12,7 @@ from qiskit.circuit.library import StatePreparation   # sets qubits to any start
 from qiskit.primitives import StatevectorSampler       # simulates measuring the circuit
 from qiskit.circuit.library import XXPlusYYGate   # the swap gate
 from qiskit.quantum_info import Statevector   # gives exact probabilities (no random shots)
+from scipy.optimize import minimize   # classical optimizer
 
 n = len(names)   # 8 cells to choose from
 K = 4            # cells in one pack
@@ -166,3 +167,48 @@ def prob_best(gammas, betas):
 print("\n[6d] chance of best pack if you guess randomly:", round(1 / 70, 3))
 for g, b in [(0, 0), (1, 0.3), (2, 0.3), (3, 0.5), (-2, 0.3)]:
     print("  gamma", g, "beta", b, "-> chance of best pack:", round(prob_best([g], [b]), 3))
+
+
+
+
+
+# score of every 8-bit pattern (only 4-cell patterns can appear, the rest stay 0)
+pattern_score = np.zeros(2 ** n)
+for b in range(2 ** n):
+    if bin(b).count("1") == K:
+        cells = decode(format(b, "08b"))      # reuse our decode function
+        pattern_score[b] = pack_score(cells)
+
+
+# average score of the packs the circuit gives (lower = better)
+def expected_score(angles):
+    p = len(angles) // 2                       # first half = gammas, second half = betas
+    probs = Statevector(qaoa_circuit(angles[:p], angles[p:])).probabilities()
+    return probs @ pattern_score               # sum of (chance x score) over all patterns
+
+
+P = 2   # number of layers
+
+# step 1: rough search - try a grid of angles, keep the best as a starting point
+best_value = float("inf")
+for g in np.linspace(0.2, 6, 8):
+    for b in np.linspace(0.1, 1.5, 6):
+        angles = np.array([g] * P + [b] * P)
+        value = expected_score(angles)
+        if value < best_value:
+            best_value = value
+            best_start = angles
+
+# step 2: fine-tune from there with an optimizer called COBYLA
+result = minimize(expected_score, best_start, method="COBYLA", options={"maxiter": 150})
+gammas = result.x[:P]
+betas = result.x[P:]
+
+# compare with random guessing
+four_cells = np.array([bin(b).count("1") == K for b in range(2 ** n)])
+random_average = pattern_score[four_cells].mean()
+
+print("\n[6e] best angles: gammas", np.round(gammas, 3), "betas", np.round(betas, 3))
+print("average pack score, random guessing:", round(random_average, 4))
+print("average pack score, quantum circuit:", round(result.fun, 4))
+print("chance of best pack: random", round(1 / 70, 3), "| quantum", round(prob_best(gammas, betas), 3))
