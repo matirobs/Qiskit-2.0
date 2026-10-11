@@ -11,6 +11,7 @@ from qiskit import QuantumCircuit                      # builds quantum circuits
 from qiskit.circuit.library import StatePreparation   # sets qubits to any starting state we want
 from qiskit.primitives import StatevectorSampler       # simulates measuring the circuit
 from qiskit.circuit.library import XXPlusYYGate   # the swap gate
+from qiskit.quantum_info import Statevector   # gives exact probabilities (no random shots)
 
 n = len(names)   # 8 cells to choose from
 K = 4            # cells in one pack
@@ -132,3 +133,36 @@ counts2 = StatevectorSampler(seed=1).run([test2], shots=1000).result()[0].data.m
 
 print("\n[6c] swap gates used:", n * (n - 1) // 2)
 print("still exactly 4 cells in every measurement?", all(key.count("1") == K for key in counts2))
+
+
+
+M = mismatch / mismatch.max()     # scale mismatch to 0..1 so angles stay simple
+
+# for every pair: if BOTH cells are in the pack, add a phase based on their mismatch
+def cost_layer(qc, gamma):
+    for i in range(n):
+        for j in range(i + 1, n):
+            qc.cp(-gamma * M[i, j], i, j)
+
+
+# full circuit: start state, then (cost layer -> swap mixer) for each layer
+def qaoa_circuit(gammas, betas):
+    qc = start.copy()
+    for gamma, beta in zip(gammas, betas):
+        cost_layer(qc, gamma)
+        swap_mixer(qc, beta)
+    return qc
+
+
+# the best pack as a number: qubit i on = 2 to the power i
+best_index = sum(2 ** i for i in best_pack)
+
+# exact chance that the circuit gives the best pack
+def prob_best(gammas, betas):
+    probs = Statevector(qaoa_circuit(gammas, betas)).probabilities()
+    return probs[best_index]
+
+
+print("\n[6d] chance of best pack if you guess randomly:", round(1 / 70, 3))
+for g, b in [(0, 0), (1, 0.3), (2, 0.3), (3, 0.5), (-2, 0.3)]:
+    print("  gamma", g, "beta", b, "-> chance of best pack:", round(prob_best([g], [b]), 3))
