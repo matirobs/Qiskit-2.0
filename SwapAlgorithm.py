@@ -10,6 +10,7 @@ from candidates import names, capacity_now, capacity_future
 from qiskit import QuantumCircuit                      # builds quantum circuits
 from qiskit.circuit.library import StatePreparation   # sets qubits to any starting state we want
 from qiskit.primitives import StatevectorSampler       # simulates measuring the circuit
+from qiskit.circuit.library import XXPlusYYGate   # the swap gate
 
 n = len(names)   # 8 cells to choose from
 K = 4            # cells in one pack
@@ -102,3 +103,32 @@ print("\n[6a] different packs measured:", len(counts))
 print("every measurement picks exactly 4 cells?", all(key.count("1") == K for key in counts))
 example = list(counts)[0]
 print("example:", example, "->", [names[i] for i in decode(example)])
+
+
+# test on 2 qubits: start with qubit 0 = 1 (cell 0 in, cell 1 out)
+for angle, label in [(np.pi, "full swap"), (np.pi / 2, "half swap")]:
+    demo = QuantumCircuit(2)
+    demo.x(0)                                        # turn qubit 0 on
+    demo.append(XXPlusYYGate(angle), [0, 1])         # swap between qubit 0 and 1
+    demo.measure_all()
+    c = StatevectorSampler(seed=1).run([demo], shots=100).result()[0].data.meas.get_counts()
+    print("[6b]", label, "->", c)
+
+
+
+# a swap gate between EVERY pair of cells, so any cell can trade places with any other
+# beta = how strongly the cells swap
+def swap_mixer(qc, beta):
+    for i in range(n):
+        for j in range(i + 1, n):                       # every pair once
+            qc.append(XXPlusYYGate(2 * beta), [i, j])
+
+
+# test: start with all 70 packs, run the swap mixer, measure
+test2 = start.copy()
+swap_mixer(test2, 0.4)
+test2.measure_all()
+counts2 = StatevectorSampler(seed=1).run([test2], shots=1000).result()[0].data.meas.get_counts()
+
+print("\n[6c] swap gates used:", n * (n - 1) // 2)
+print("still exactly 4 cells in every measurement?", all(key.count("1") == K for key in counts2))
